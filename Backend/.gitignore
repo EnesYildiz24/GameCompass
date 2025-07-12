@@ -1,0 +1,45 @@
+# Node modules
+node_modules/
+
+# Build-Ausgabe (bei der Kompilierung von TypeScript)
+dist/
+build/
+
+# TypeScript-spezifische Dateien (z. B. Inkrementelle Builds)
+*.tsbuildinfo
+
+# Log-Dateien
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Umgebungsvariablen (nicht versionieren, da sensible Daten enthalten können)
+.env
+.env.*.local
+
+# IDE- und Editor-Einstellungen
+.vscode/
+.idea/
+
+# Temporäre Dateien & Ordner
+tmp/
+temp/
+
+# Betriebssystem-spezifische Dateien
+.DS_Store
+Thumbs.db
+
+# Coverage-Ordner (bei Tests)
+coverage/
+
+# Optional: Lokale Datenbank-Dumps oder -Daten (anpassen, falls du solche Ordner nutzt)
+dump/
+data/
+
+# Optional: Andere Konfigurations- oder Cache-Dateien
+.yarn-integrity
+.pnp.*
+
+stripe.exe

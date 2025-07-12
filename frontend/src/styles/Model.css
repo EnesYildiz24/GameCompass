@@ -1,0 +1,386 @@
+/* Model.css – Styling für die Model Seite */
+
+/* Important Note Box */
+.important-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.wiki-container.light .important-note {
+  background-color: rgba(241, 145, 21, 0.1);
+  border: 1px solid rgba(241, 145, 21, 0.3);
+}
+
+.wiki-container.dark .important-note {
+  background-color: rgba(241, 145, 21, 0.15);
+  border: 1px solid rgba(241, 145, 21, 0.4);
+}
+
+.note-icon {
+  font-size: 1.5rem;
+  color: #f19115;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.important-note div {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.important-note strong {
+  color: #f19115;
+  font-weight: 700;
+}
+
+/* Clickable Model Cards */
+.model-card.clickable {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.model-card.clickable:hover {
+  transform: translateY(-8px);
+  border-color: #f19115;
+  box-shadow: 0 12px 24px rgba(241, 145, 21, 0.3);
+}
+
+.model-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.wiki-container.light .model-link {
+  background-color: rgba(241, 145, 21, 0.05);
+  color: #f19115;
+}
+
+.wiki-container.dark .model-link {
+  background-color: rgba(241, 145, 21, 0.1);
+  color: #f19115;
+}
+
+.model-card.clickable:hover .model-link {
+  background-color: rgba(241, 145, 21, 0.2);
+}
+
+.link-arrow {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.model-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  line-height: 1.6;
+}
+
+.model-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.model-container h1 .gradient-text {
+  background: linear-gradient(45deg, #f19115, #5c8791);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.wiki-container.dark .model-container h1 .gradient-text {
+  background: linear-gradient(45deg, #f19115, #8bc34a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.model-container h1 .model-emoji {
+  margin-right: 0.5rem;
+}
+
+.wiki-container.light .model-container h1 .model-emoji {
+  color: #333;
+}
+
+.wiki-container.dark .model-container h1 .model-emoji {
+  color: #e0dfe5;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 4px solid #f19115;
+}
+
+.wiki-container.light .section {
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.wiki-container.dark .section {
+  background-color: #2d2e35;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.section h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #f19115;
+}
+
+/* Models Grid */
+.models-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.model-card {
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.wiki-container.light .model-card {
+  background-color: #ffffff;
+  border-color: #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.wiki-container.dark .model-card {
+  background-color: #3a3b42;
+  border-color: #555;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.model-card:hover {
+  transform: translateY(-5px);
+  border-color: #f19115;
+  box-shadow: 0 8px 20px rgba(241, 145, 21, 0.2);
+}
+
+.model-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.model-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.model-header h3 {
+  margin: 0;
+  color: #f19115;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.model-card p {
+  margin: 0 0 1rem 0;
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+.model-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.model-features li {
+  padding: 0.3rem 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.model-features li::before {
+  content: '•';
+  color: #f19115;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Relationships */
+.relationships-info {
+  margin-top: 1rem;
+}
+
+.relationship-diagram {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.relationship-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.wiki-container.light .relationship-item {
+  background-color: rgba(241, 145, 21, 0.05);
+  border: 1px solid rgba(241, 145, 21, 0.2);
+}
+
+.wiki-container.dark .relationship-item {
+  background-color: rgba(241, 145, 21, 0.1);
+  border: 1px solid rgba(241, 145, 21, 0.3);
+}
+
+.relationship-item:hover {
+  background-color: rgba(241, 145, 21, 0.15);
+}
+
+.rel-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.rel-arrow {
+  color: #f19115;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.rel-text {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Tech Details */
+.tech-details {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.tech-item {
+  padding: 1.2rem;
+  border-radius: 6px;
+  border-left: 3px solid #f19115;
+}
+
+.wiki-container.light .tech-item {
+  background-color: #ffffff;
+  border-right: 1px solid #e0e0e0;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.wiki-container.dark .tech-item {
+  background-color: #3a3b42;
+  border-right: 1px solid #555;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
+}
+
+.tech-item h4 {
+  margin: 0 0 0.5rem 0;
+  color: #f19115;
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tech-item p {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .model-container {
+    padding: 1rem;
+  }
+  
+  .model-container h1 {
+    font-size: 2rem;
+  }
+  
+  .section {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .models-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .model-card {
+    padding: 1.2rem;
+  }
+  
+  .model-header {
+    gap: 0.6rem;
+  }
+  
+  .model-icon {
+    font-size: 1.5rem;
+  }
+  
+  .model-header h3 {
+    font-size: 1.1rem;
+  }
+  
+  .relationship-item {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  
+  .rel-arrow {
+    transform: rotate(90deg);
+  }
+  
+  .tech-details {
+    gap: 1rem;
+  }
+  
+  .tech-item {
+    padding: 1rem;
+  }
+} 

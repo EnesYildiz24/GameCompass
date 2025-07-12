@@ -1,0 +1,475 @@
+/* EnvironmentVariables.css – Styling für die Environment Variables Seite */
+
+.env-vars-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  line-height: 1.6;
+}
+
+.env-vars-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.env-vars-container h1 .gradient-text {
+  background: linear-gradient(45deg, #f19115, #5c8791);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.wiki-container.dark .env-vars-container h1 .gradient-text {
+  background: linear-gradient(45deg, #f19115, #8bc34a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.env-vars-container h1 .env-emoji {
+  margin-right: 0.5rem;
+}
+
+.wiki-container.light .env-vars-container h1 .env-emoji {
+  color: #333;
+}
+
+.wiki-container.dark .env-vars-container h1 .env-emoji {
+  color: #e0dfe5;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 4px solid #f19115;
+}
+
+.wiki-container.light .section {
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.wiki-container.dark .section {
+  background-color: #2d2e35;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.section h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #f19115;
+}
+
+/* Environment Variables Tabellen */
+.table-container {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+}
+
+.env-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.env-table th,
+.env-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid;
+}
+
+.wiki-container.light .env-table th,
+.wiki-container.light .env-table td {
+  border-color: #e0e0e0;
+}
+
+.wiki-container.dark .env-table th,
+.wiki-container.dark .env-table td {
+  border-color: #444;
+}
+
+.env-table th {
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: linear-gradient(45deg, #f19115, #5c8791);
+  color: white;
+}
+
+.wiki-container.dark .env-table th {
+  background: linear-gradient(45deg, #f19115, #8bc34a);
+}
+
+.wiki-container.light .env-table {
+  background-color: #ffffff;
+}
+
+.wiki-container.dark .env-table {
+  background-color: #2d2e35;
+}
+
+.env-table tr:nth-child(even) {
+  background-color: rgba(0,0,0,0.02);
+}
+
+.wiki-container.dark .env-table tr:nth-child(even) {
+  background-color: rgba(255,255,255,0.05);
+}
+
+.env-table tr:hover {
+  background-color: rgba(241, 145, 21, 0.1);
+}
+
+.env-table td:first-child {
+  font-weight: 600;
+}
+
+.wiki-container.light .env-table td:first-child {
+  color: #f19115;
+}
+
+.wiki-container.dark .env-table td:first-child {
+  color: #f19115;
+}
+
+/* Code Blocks */
+.code-block-with-copy {
+  margin: 1rem 0;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid;
+}
+
+.wiki-container.light .code-block-with-copy {
+  border-color: #e0e0e0;
+}
+
+.wiki-container.dark .code-block-with-copy {
+  border-color: #444;
+}
+
+.code-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid;
+}
+
+.wiki-container.light .code-header {
+  background-color: #f8f9fa;
+  border-bottom-color: #e0e0e0;
+}
+
+.wiki-container.dark .code-header {
+  background-color: #3a3b42;
+  border-bottom-color: #555;
+}
+
+.code-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #f19115;
+}
+
+.copy-button {
+  background: none;
+  border: 1px solid #f19115;
+  color: #f19115;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.copy-button:hover {
+  background-color: #f19115;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.copy-button:active {
+  transform: translateY(0);
+}
+
+.code-block {
+  margin: 0;
+  border-radius: 0;
+  overflow: hidden;
+  text-align: left;
+}
+
+.code-block pre {
+  margin: 0;
+  padding: 1.5rem;
+  font-family: 'Courier New', 'Monaco', monospace;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  overflow-x: auto;
+}
+
+.wiki-container.light .code-block pre {
+  background-color: #2d2d2d;
+  color: #ff6b6b;
+}
+
+.wiki-container.dark .code-block pre {
+  background-color: #1a1a1a;
+  color: #8bc34a;
+}
+
+/* Simple Code Blocks (für Setup-Anleitungen) */
+.code-block.simple-code {
+  margin: 1rem 0;
+  border-radius: 6px;
+  overflow: hidden;
+  border: none;
+  text-align: left;
+}
+
+.code-block.simple-code pre {
+  margin: 0;
+  padding: 1rem;
+  font-family: 'Courier New', 'Monaco', monospace;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  overflow-x: auto;
+}
+
+.wiki-container.light .code-block.simple-code pre {
+  background-color: #f8f9fa;
+  color: #333;
+  border: 1px solid #e0e0e0;
+}
+
+.wiki-container.dark .code-block.simple-code pre {
+  background-color: #3a3b42;
+  color: #e0dfe5;
+  border: 1px solid #555;
+}
+
+/* Inline Code */
+code {
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-family: 'Courier New', 'Monaco', monospace;
+  font-size: 0.9rem;
+}
+
+.wiki-container.light code {
+  background-color: #e8e8e8;
+  color: #2d5a87;
+}
+
+.wiki-container.dark code {
+  background-color: #3a3a3a;
+  color: #87ceeb;
+}
+
+/* Sicherheitswarnung */
+.security-warning {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 2px solid #ff6b6b;
+  background: rgba(255, 107, 107, 0.1);
+  margin: 1.5rem 0;
+}
+
+.wiki-container.dark .security-warning {
+  background: rgba(255, 107, 107, 0.15);
+  border-color: #ff6b6b;
+}
+
+.warning-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.security-warning ul {
+  margin: 0.5rem 0 0 1rem;
+  padding: 0;
+}
+
+.security-warning li {
+  margin-bottom: 0.5rem;
+}
+
+/* Setup-Anleitung */
+.step-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.wiki-container.light .step {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.wiki-container.dark .step {
+  background-color: #3a3b42;
+  border: 1px solid #555;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.step:hover {
+  transform: translateY(-2px);
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #f19115, #5c8791);
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.wiki-container.dark .step-number {
+  background: linear-gradient(45deg, #f19115, #8bc34a);
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-content strong {
+  font-size: 1.1rem;
+  color: #f19115;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Info Boxes */
+.info-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  margin: 1rem 0;
+  border-left: 4px solid #17a2b8;
+}
+
+.wiki-container.light .info-box {
+  background-color: rgba(23, 162, 184, 0.1);
+}
+
+.wiki-container.dark .info-box {
+  background-color: rgba(23, 162, 184, 0.15);
+}
+
+.info-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.info-box strong {
+  color: #17a2b8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .env-vars-container {
+    padding: 1rem;
+  }
+  
+  .env-vars-container h1 {
+    font-size: 2rem;
+  }
+  
+  .section {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .code-block pre {
+    padding: 1rem;
+    font-size: 0.7rem;
+  }
+  
+  .env-table th,
+  .env-table td {
+    padding: 0.8rem 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .env-table th {
+    font-size: 0.8rem;
+  }
+  
+  .step {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .step-number {
+    align-self: center;
+  }
+  
+  .security-warning {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .info-box {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .code-header {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  
+  .copy-button {
+    align-self: center;
+  }
+} 

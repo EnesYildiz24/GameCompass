@@ -1,0 +1,240 @@
+{
+  "brand": "GameCompass",
+  "nav.games": "Games",
+  "nav.sell": "Sell",
+  "nav.about": "About",
+  "nav.login": "Login",
+  "nav.logout": "Logout",
+  "nav.search": "Search",
+  "user.welcome": "Welcome, {username}",
+  "user.logout": "Logout",
+  "user.login": "Login",
+  "language.de": "German",
+  "language.en": "English",
+  "language.fr": "French",
+  "language.es": "Spanish",
+  "language.tr": "Turkish",
+  "language.ru": "Russian",
+  "popularGenres": "Popular Genres",
+  "mostPurchased": "Most Purchased",
+  "mostPlayed": "Most Played",
+  "freeGames": "Free Games",
+  "login": {
+    "title": "Login",
+    "email": "Email",
+    "password": "Password",
+    "error": {
+      "fillFields": "Please fill in all fields.",
+      "invalid": "Your email or password is invalid.",
+      "failed": "Login failed."
+    },
+    "loading": "Please wait…",
+    "submit": "Sign in",
+    "forgotPassword": "Forgot password?",
+    "noAccount": "No account yet?",
+    "registerNow": "Register now",
+    "forgotSubmit": "Reset password",
+    "forgotSuccess": "If the email exists, a link has been sent.",
+    "required": "Login Required"
+  },
+  "register": {
+    "title": "Register",
+    "username": "Name",
+    "email": "Email",
+    "password": "Password",
+    "error": {
+      "fillFields": "Please fill in all fields.",
+      "failed": "Registration failed."
+    },
+    "loading": "Please wait…",
+    "submit": "Sign up"
+  },
+  "landing": {
+    "title": "Welcome to GameCompass Demo",
+    "descPart1": "Everything you see is not final and may change.",
+    "descPart2": "This platform serves as a marketplace to buy and sell digital games and game keys. A transparent rating system and modern payment methods ensure security and simplicity. Additionally, an interactive onboarding guide helps new users get started in the world of video games.",
+    "cta": {
+      "explore": "Discover Games",
+      "sell": "Sell Now"
+    },
+    "heroImageAlt": "Demo platform preview image",
+    "features": {
+      "title": "Why GameCompass?",
+      "reason1": { "title": "Reason 1", "desc": "blah blah blah" },
+      "reason2": { "title": "Reason 2", "desc": "blah blah blah 2" },
+      "reason3": { "title": "Reason 3", "desc": "blah blah blah 3" }
+    },
+    "modal": {
+      "loginTitle": "Login",
+      "close": "Close"
+    }
+  },
+  "genres": {
+    "adventure": "Adventure",
+    "racing": "Racing Games",
+    "horror": "Horror",
+    "action": "Action",
+    "strategy": "Strategy"
+  },
+  "sections": {
+    "popularGenres": "Popular Genres",
+    "mostPurchased": "Most Purchased",
+    "mostPlayed": "Most Played",
+    "freeGames": "Free Games",
+    "bestRated": "Best Rated",
+    "cheapGames": "Games under 15€",
+    "privacy": "Privacy Policy",
+    "terms": "Terms",
+    "imprint": "Imprint",
+    "support": "Support",
+    "language": "Language"
+  },
+  "positions": {
+    "privacy": { "x": "860.26" },
+    "terms": { "x": "970.56" },
+    "imprint": { "x": "1030.78" },
+    "support": { "x": "1100.6" },
+    "facebook": { "x": "1180.85" },
+    "twitter": { "x": "1200.26" },
+    "language": { "x": "861.88", "y": "3864.16" },
+    "languageSelector": { "x": "931.24", "y": "3849.16" },
+    "divider1": { "x": "955" },
+    "divider2": { "x": "1013" },
+    "divider3": { "x": "1083" },
+    "divider4": { "x": "1158" },
+    "divider5": { "x": "1183" }
+  },
+  "chatbot": {
+    "welcome": "Welcome to GameCompass! How can I help you?",
+    "placeholder": "Type a message...",
+    "send": "Send",
+    "title": "GameCompass Assistant",
+    "error": "I'm sorry, I couldn't process your message. Please try again later.",
+    "history": "Chat History",
+    "newChat": "New Chat",
+    "noHistory": "No chat history available",
+    "deleteChat": "Delete chat"
+  },
+  "audioChat": {
+    "listening": "Listening...",
+    "processing": "Processing...",
+    "responding": "Responding...",
+    "error": {
+      "microphoneAccess": "Please allow microphone access",
+      "microphoneError": "Microphone error",
+      "noSpeech": "No speech detected. Please speak more clearly.",
+      "audioCapture": "Microphone problem. Please check your device settings.",
+      "notAllowed": "Microphone access denied. Please allow access.",
+      "speechRecognition": "Speech recognition error",
+      "responseGeneration": "Error generating response",
+      "speechGeneration": "Error generating speech",
+      "speechOutput": "Error with speech output"
+    },
+    "voiceToggle": {
+      "female": "Female voice activated",
+      "male": "Male voice activated",
+      "femaleTitle": "Switch to male voice",
+      "maleTitle": "Switch to female voice"
+    },
+    "startButton": "Start voice assistant",
+    "stopButton": "Stop recording",
+    "browserNotSupported": "Browser does not support speech recognition"
+  },
+  "errors": {
+    "loadGames": "Error loading games",
+    "createOffer": "Error creating offer"
+  },
+  "success": {
+    "offerCreated": "Offer successfully created!"
+  },
+  "common": {
+    "close": "Close"
+  },
+  "condition": {
+    "new": "New",
+    "newDescription": "Original and unused",
+    "used": "Used",
+    "usedDescription": "Tested and in good condition"
+  },
+  "aboutUs": {
+    "title": "About GameCompass",
+    "description": "Discover new blockbusters, indie highlights and timeless classics – fast, secure and uncomplicated. With us you will definitely find the right game for you.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "Our mission is to build a vibrant community where trading games is simple, transparent and accessible to everyone. We believe that access to games should be just as entertaining and smooth as playing them."
+    },
+    "features": {
+      "title": "What makes us special",
+      "marketplace": "Marketplace for everyone: Commercial providers",
+      "crossplatform": "Cross-platform: Games for PC",
+      "security": "Secure transactions: Buyer & seller protection included",
+      "usability": "Easy operation: Intuitive user interface & modern shop"
+    },
+    "values": {
+      "title": "Our Values",
+      "fairness": "Fairness: Transparent prices and fair conditions for everyone",
+      "reliability": "Reliability: Technical support and secure payment",
+      "passion": "Passion: We love games and live gaming culture",
+      "innovation": "Innovation: Continuous development for the best user experience"
+    },
+    "team": {
+      "title": "Team & Development",
+      "description": "Behind GameCompass is a young, dynamic team with gaming background. We are constantly working to improve the platform – for dealers, buyers and the entire gaming world."
+    },
+    "vision": {
+      "title": "Future & Vision",
+      "description": "Our vision is to make GameCompass the leading platform for digital and physical game trading – global, sustainable and user-oriented."
+    }
+  },
+  "sell": {
+    "digitalOffer":   "Digital offer",
+    "physicalOffer":  "Physical offer",
+    "digitalKey":     "Digital key",  
+    "loginFirst":      "Please log in first.",
+    "loginRequired":   "Login required",
+    "startStripe":     "Start Stripe onboarding",
+    "continueStripe":  "Continue to Stripe",
+    "redirecting":     "Redirecting…",
+    "title": "Sell your games quickly and easily!",
+    "description": "Got games you no longer play? Use our marketplace to sell them and make other gamers happy.",
+    "createOffer": "Create new offer",
+    "selectGame": "Select game",
+    "selectGamePlaceholder": "Choose a game…",
+    "price": "Price (€)",
+    "condition": "Condition",
+    "used": "Used",
+    "new": "New",
+    "yourGames": "Your games",
+    "gameName": "Game name",
+    "gameNamePlaceholder": "Name of the game…",
+    "gameDescription": "Description",
+    "gameDescriptionPlaceholder": "Short description…",
+    "gamePrice": "Price",
+    "gamePricePlaceholder": "e.g. 19.99",
+    "gameAvailability": "Available immediately",
+    "gameImageURL": "Upload image",
+    "createGameTitle": "New game",
+    "createOfferTitle": "and offer",
+    "createGameAndOfferButton": "Create game & offer",
+    "creating": "Creating…",
+    "gameAndOfferCreatedSuccess": "Game & offer created successfully!",
+    "genres": "Genres",
+    "genresPlaceholder": "Select genres…",
+    "platforms": "Platforms",
+    "platformsPlaceholder": "Select platforms…",
+    "searchGame": "Search game",
+    "searchGamePlaceholder": "Type to search…",
+    "gameSelected": "\"{{name}}\" selected"
+  },
+  "verifyPending": {
+    "title": "Check your inbox {{username, string}}!",
+    "subtitle": "We’ve sent you a link to verify your email address."
+  },  "cart": {
+    "add": "Add to cart",
+    "goToCart": "Go to cart",
+    "continueShopping": "Continue shopping",
+    "itemAdded": "Item added to cart",
+    "notification": "Cart",
+    "chooseNextStep": "What would you like to do next?"
+  }
+}

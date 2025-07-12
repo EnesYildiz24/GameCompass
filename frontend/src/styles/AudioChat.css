@@ -1,0 +1,330 @@
+/* Sprachassistent-Styles */
+.audio-assistant-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.audio-controls-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.audio-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #f19115;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.audio-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.audio-button.recording {
+  background-color: #e74c3c;
+  animation: pulse 1.5s infinite;
+}
+
+.audio-button svg {
+  width: 30px;
+  height: 30px;
+  color: white;
+}
+
+/* Verbesserte Styles für den Stimmen-Umschalter */
+.voice-toggle-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #f19115; /* Orange Hintergrund wie der Hauptbutton */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.voice-toggle-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.voice-toggle-button.female {
+  border: 3px solid #e83e8c;
+}
+
+.voice-toggle-button.male {
+  border: 3px solid #007bff;
+}
+
+.voice-toggle-button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.voice-toggle-button.female:before {
+  background: radial-gradient(circle, rgba(232,62,140,0.15) 0%, transparent 70%);
+}
+
+.voice-toggle-button.male:before {
+  background: radial-gradient(circle, rgba(0,123,255,0.15) 0%, transparent 70%);
+}
+
+.voice-toggle-button:after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  z-index: -1;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.voice-toggle-button.female:after {
+  background: conic-gradient(from 0deg, transparent, rgba(232,62,140,0.2), transparent);
+  animation: rotate 4s linear infinite;
+}
+
+.voice-toggle-button.male:after {
+  background: conic-gradient(from 0deg, transparent, rgba(0,123,255,0.2), transparent);
+  animation: rotate 4s linear infinite;
+}
+
+.voice-toggle-button:hover:after {
+  opacity: 0.8;
+}
+
+.voice-toggle-button .icon-container {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.voice-toggle-button:hover .icon-container {
+  transform: scale(1.1);
+}
+
+.voice-toggle-button svg {
+  width: 28px;
+  height: 28px;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.3));
+}
+
+.voice-toggle-button.female svg {
+  color: #e83e8c;
+}
+
+.voice-toggle-button.male svg {
+  color: #007bff;
+}
+
+.status-indicator {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s, transform 0.3s;
+  white-space: nowrap;
+}
+
+.status-indicator.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(231, 76, 60, 0.4);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Dark Mode Anpassungen */
+:root[data-theme='dark'] .status-indicator {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+:root[data-theme='dark'] .voice-toggle-button {
+  background-color: #333;
+}
+
+:root[data-theme='dark'] .voice-toggle-button svg {
+  filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.5));
+}
+
+/* ✨ NEUE Animation für Spielempfehlungs-Cards */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ✨ NEUE Bounce-Animation für Popup-Titel */
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);
+  }
+  40%, 43% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -8px, 0);
+  }
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -4px, 0);
+  }
+  90% {
+    transform: translate3d(0, -2px, 0);
+  }
+}
+
+/* ✨ NEUE Glow-Animation für Hover-Effekte */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(241, 145, 21, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(241, 145, 21, 0.8), 0 0 30px rgba(241, 145, 21, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(241, 145, 21, 0.5);
+  }
+}
+
+/* ✨ NEUE Klick-Animation */
+@keyframes clickPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Dark Mode Anpassungen für neue Komponenten */
+:root[data-theme='dark'] .game-popup {
+  background: linear-gradient(135deg, #1a1b1f 0%, #2a2d32 100%);
+  border-color: rgba(241, 145, 21, 0.4);
+}
+
+:root[data-theme='dark'] .game-card {
+  background: linear-gradient(135deg, #25262b 0%, #2f3035 100%);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+:root[data-theme='dark'] .game-card:hover {
+  border-color: rgba(241, 145, 21, 0.6);
+  box-shadow: 0 20px 40px rgba(241, 145, 21, 0.4);
+}
+
+/* ✨ VERBESSERTE Responsive Anpassungen */
+@media (max-width: 768px) {
+  .game-popup {
+    width: 95vw;
+    max-height: 85vh;
+  }
+  
+  .game-grid {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 15px;
+  }
+  
+  .game-card {
+    min-height: auto;
+  }
+  
+  .game-popup-title {
+    font-size: 20px;
+  }
+}
+
+/* ✨ NEUE Accessibility-Verbesserungen */
+.game-card:focus {
+  outline: 2px solid #f19115;
+  outline-offset: 2px;
+}
+
+.close-button:focus {
+  outline: 2px solid #f19115;
+  outline-offset: 2px;
+}
+
+/* ✨ NEUE Loading-States für Bilder */
+.game-image {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* ✨ NEUE Scroll-Animationen */
+.game-grid {
+  scroll-behavior: smooth;
+}
+
+.game-grid::-webkit-scrollbar-thumb:hover {
+  background: #e08010;
+} 

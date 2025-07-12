@@ -1,0 +1,21 @@
+ const users = [
+     ObjectId('6828c067eb8b825fd9ee9131'),
+     ObjectId('6828c0e5abf21048bb3bd751'),
+   ];
+  
+   const allSpiele = db.spiels.find().toArray();
+  
+   allSpiele.forEach(spiel => {
+     const randomUser = users[Math.floor(Math.random() * users.length)];
+     db.offers.insertOne({
+       game: spiel._id,
+       seller: randomUser,
+       price: spiel.price ?? 20,
+       condition: Math.random() > 0.5 ? 'new' : 'used',
+       availability: true,
+       createdAt: new Date()
+     });
+   });
+  
+   print('Jedes Spiel hat jetzt ein Offer mit zufälligem Seller und Spielpreis.');
+  

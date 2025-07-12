@@ -1,0 +1,687 @@
+.chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  width: 140px; /* Breite für beide Icons */
+  justify-content: flex-end;
+}
+
+.chatbot-icon {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.chatbot-icon:hover {
+  transform: scale(1.1);
+}
+
+.chatbot-icon.active {
+  transform: scale(0.9);
+}
+
+.chatbot-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.chat-icon-bg {
+  fill: #f19115;
+}
+
+.chat-icon-bubble {
+  fill: #f19115;
+}
+
+.chat-icon-outline,
+.chat-icon-dots {
+  fill: #fff;
+}
+
+/* Chatfenster höher positionieren und vergrößern */
+.chatbot-window {
+  position: absolute;
+  bottom: 80px;  /* Von 70px erhöht */
+  right: 0;
+  width: 900px;   /* Von 600px vergrößert */
+  height: 800px;  /* Von 600px vergrößert */
+  background-color: var(--chat-bg, white);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: background-color 0.3s;
+}
+
+/* Neue Styles für das Layout mit Verlauf */
+.chatbot-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.chatbot-history-panel {
+  width: 35%;
+  background-color: var(--history-panel-bg, #f5f5f5);
+  border-right: 1px solid var(--input-border, #eee);
+  display: flex !important;
+  flex-direction: column;
+  transition: background-color 0.3s;
+  overflow: hidden;
+}
+
+.chatbot-history-header {
+  padding: 12px;
+  border-bottom: 1px solid var(--input-border, #eee);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatbot-history-header h4 {
+  margin: 0;
+  font-size: 15px;
+  color: var(--history-panel-text, #333);
+}
+
+.chatbot-history-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.history-session {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background-color: var(--history-session-bg, #e9e9e9);
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--history-session-text, #333);
+  transition: background-color 0.2s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.history-session-content {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.history-session:hover {
+  background-color: var(--history-session-hover, #d9d9d9);
+}
+
+.history-session.active {
+  background-color: var(--header-bg, #5c8791);
+  color: white;
+}
+
+/* Papierkorb-Symbol für einzelne Sessions */
+.delete-session-btn {
+  background: none;
+  border: none;
+  color: var(--delete-icon, #888);
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s, color 0.2s;
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.delete-session-btn:hover {
+  opacity: 1;
+  color: var(--delete-icon-hover, #e74c3c);
+}
+
+.history-session.active .delete-session-btn {
+  color: white;
+}
+
+.chatbot-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chatbot-header {
+  background-color: var(--header-bg, #5c8791);
+  color: white;
+  padding: 12px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.chatbot-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.chatbot-controls {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+/* ✨ ENTFERNT: History-Button - History bleibt immer sichtbar */
+.history-button {
+  display: none !important; /* Komplett ausblenden */
+}
+
+/* Mehr Platz für die Nachrichten */
+.chatbot-messages {
+  flex: 1;
+  padding: 25px;  /* Von 18px erhöht */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;      /* Von 12px erhöht */
+}
+
+/* Größere Nachrichtenblasen */
+.message {
+  padding: 15px 25px;
+  border-radius: 20px;
+  max-width: 95%;     /* Von 85% auf 95% erhöht - macht die Nachrichtenblasen breiter */
+  word-wrap: break-word;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.message.bot {
+  align-self: flex-start;
+  width: 95%;         /* Neue Eigenschaft - macht Bot-Nachrichten breiter */
+  background-color: var(--bot-message-bg, #f0f0f0);
+  color: var(--bot-message-text, #000);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.message.user {
+  align-self: flex-end;
+  width: 95%;         /* Neue Eigenschaft - macht User-Nachrichten breiter */
+  background-color: var(--header-bg, #5c8791);
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.message.loading {
+  padding: 12px;
+}
+
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.typing-indicator span {
+  width: 8px;
+  height: 8px;
+  background-color: var(--typing-indicator, #999);
+  border-radius: 50%;
+  display: inline-block;
+  animation: typing 1.4s infinite ease-in-out both;
+  transition: background-color 0.3s;
+}
+
+.typing-indicator span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0%,
+  80%,
+  100% {
+    transform: scale(0.6);
+    opacity: 0.6;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.chatbot-input {
+  display: flex;
+  padding: 12px;
+  border-top: 1px solid var(--input-border, #eee);
+  background-color: var(--chat-bg, white);
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.chatbot-input input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid var(--input-border, #ddd);
+  border-radius: 20px;
+  outline: none;
+  background-color: var(--input-bg, white);
+  color: var(--input-text, black);
+  font-size: 15px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.chatbot-input input:disabled {
+  background-color: var(--input-disabled-bg, #f5f5f5);
+}
+
+.chatbot-input button {
+  margin-left: 10px;
+  padding: 12px 18px;
+  background-color: #f19115;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.chatbot-input button:hover:not(:disabled) {
+  background-color: #e08010;
+}
+
+.chatbot-input button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Verbesserte Papierkorb-Schaltfläche */
+.clear-history-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: var(--clear-history-btn, #e74c3c);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.clear-history-button svg {
+  width: 14px;
+  height: 14px;
+}
+
+.clear-history-button:hover {
+  background-color: var(--clear-history-btn-hover, #c0392b);
+}
+
+/* Neue Styles für den "Neuer Chat"-Button */
+.new-chat-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: var(--new-chat-btn, #f19115);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-bottom: 15px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+}
+
+.new-chat-button svg {
+  width: 14px;
+  height: 14px;
+}
+
+.new-chat-button:hover {
+  background-color: var(--new-chat-btn-hover, #e08010);
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 768px) {
+  .chatbot-window {
+    width: 90vw;
+    height: 85vh;     /* Von 80vh erhöht */
+    bottom: 90px;     /* Von 80px erhöht */
+  }
+  
+  .chatbot-history-panel {
+    width: 40%;
+  }
+}
+
+/* Dark/Light Mode Variablen */
+:root {
+  --chat-bg: white;
+  --bot-message-bg: #f0f0f0;
+  --bot-message-text: #000;
+  --input-border: #eee;
+  --input-bg: white;
+  --input-text: black;
+  --input-disabled-bg: #f5f5f5;
+  --typing-indicator: #999;
+  --history-panel-bg: #f5f5f5;
+  --history-panel-text: #333;
+  --clear-history-btn: #e74c3c;
+  --clear-history-btn-hover: #c0392b;
+  --history-session-bg: #e9e9e9;
+  --history-session-hover: #d9d9d9;
+  --history-session-text: #333;
+  --delete-icon: #888;
+  --delete-icon-hover: #e74c3c;
+  --new-chat-btn: #f19115;
+  --new-chat-btn-hover: #e08010;
+  --no-history-text: #333;
+}
+
+:root[data-theme='dark'] {
+  --chat-bg: #34353b;
+  --bot-message-bg: #4a4b52;
+  --bot-message-text: #ffffff;
+  --input-border: #4a4b52;
+  --input-bg: #4a4b52;
+  --input-text: white;
+  --input-disabled-bg: #3a3b42;
+  --typing-indicator: #cccccc;
+  --history-panel-bg: #2a2b30;
+  --history-panel-text: #ffffff;
+  --clear-history-btn: #e74c3c;
+  --clear-history-btn-hover: #c0392b;
+  --history-session-bg: #3a3b42;
+  --history-session-hover: #4a4b52;
+  --history-session-text: #ffffff;
+  --delete-icon: #aaa;
+  --delete-icon-hover: #ff6b6b;
+  --new-chat-btn: #f19115;
+  --new-chat-btn-hover: #e08010;
+  --no-history-text: #ffffff;
+}
+
+/* Audio-Chat-Icon Styles */
+.audio-chat-icon {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  position: absolute;
+  right: 70px; /* Position neben dem Chat-Icon */
+  bottom: 0;
+}
+
+.audio-chat-icon:hover {
+  transform: scale(1.1);
+}
+
+.audio-chat-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.audio-icon-wave {
+  fill: #ffffff;
+}
+
+.chatbot-history-list > div:not(.history-session):not(.new-chat-button) {
+  color: var(--no-history-text);
+}
+
+.game-card-mini.clickable {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.game-card-mini.clickable:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.game-card-mini.clickable:active {
+  transform: translateY(0);
+}
+
+/* ✨ VERBESSERTER Provider-Button Stil */
+.provider-button {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  font-size: 12px;
+  font-weight: 500;
+  min-width: 80px;
+  margin-right: auto;
+}
+
+.provider-button:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.provider-icon {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.provider-label {
+  font-size: 10px;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.current-provider-name {
+  font-size: 11px;
+  font-weight: 600;
+  opacity: 0.95;
+  max-width: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ✨ PULSIERENDER Effekt für Provider-Button */
+.provider-button::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffd93d, #ff6b6b);
+  background-size: 400% 400%;
+  border-radius: 22px;
+  z-index: -1;
+  animation: gradientShift 3s ease infinite;
+  opacity: 0.3;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ✨ AKTIVER Provider-Button Zustand */
+.provider-button.active {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.provider-button.active::before {
+  opacity: 0.6;
+  animation: gradientShift 1.5s ease infinite;
+}
+
+/* ✨ VERBESSERTE Provider-Panel - OHNE silberne Farben */
+.provider-settings-panel {
+  width: 100%;
+  background: var(--provider-panel-bg, #f8f9fa);
+  border-bottom: 1px solid var(--input-border, #eee);
+  padding: 18px;
+  transition: all 0.3s ease;
+}
+
+.provider-settings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.provider-settings-header h4 {
+  margin: 0;
+  font-size: 16px;
+  color: var(--provider-header-text, #333);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.current-provider {
+  font-size: 12px;
+  color: var(--provider-current-text, #555);
+  background: var(--provider-current-bg, #fff4e6);
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-weight: 500;
+  border: 1px solid #f19115;
+}
+
+.provider-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: var(--provider-option-bg, #ffffff);
+  border: 1px solid var(--provider-option-border, #e0e0e0);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 8px;
+}
+
+.provider-option:hover {
+  background: var(--provider-option-hover, #fff8f0);
+  border-color: var(--provider-option-border-hover, #f19115);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(241, 145, 21, 0.15);
+}
+
+.provider-option.active {
+  background: var(--provider-option-active, #fff4e6);
+  border-color: var(--provider-option-border-active, #f19115);
+  color: var(--provider-option-text-active, #e08010);
+  box-shadow: 0 2px 8px rgba(241, 145, 21, 0.25);
+}
+
+.provider-option.active::before {
+  content: '⚡';
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.provider-info strong {
+  display: block;
+  font-size: 14px;
+  color: var(--provider-name-text, #333);
+  font-weight: 600;
+}
+
+.provider-info small {
+  display: block;
+  font-size: 11px;
+  color: var(--provider-model-text, #666);
+  margin-top: 2px;
+  opacity: 0.8;
+}
+
+.provider-status {
+  font-size: 16px;
+  color: var(--provider-status-active, #4caf50);
+  font-weight: bold;
+}
+
+/* ✨ Responsive Verbesserungen */
+@media (max-width: 768px) {
+  .provider-button {
+    padding: 6px 8px;
+    min-width: 60px;
+    gap: 4px;
+  }
+  
+  .current-provider-name {
+    display: none;
+  }
+  
+  .provider-label {
+    font-size: 9px;
+  }
+  
+  .provider-settings-panel {
+    padding: 15px;
+  }
+  
+  .provider-option {
+    padding: 12px 14px;
+  }
+}
+
+/* ✨ VERBESSERTE Dark Mode Farben - OHNE silber */
+:root[data-theme='dark'] {
+  --provider-panel-bg: #1e1f23;
+  --provider-header-text: #e8e9ea;
+  --provider-current-text: #e8e9ea;
+  --provider-current-bg: #2d1810;
+  --provider-option-bg: #2a2d32;
+  --provider-option-border: #3a3d42;
+  --provider-option-hover: #2d1810;
+  --provider-option-border-hover: #f19115;
+  --provider-option-active: #2d1810;
+  --provider-option-border-active: #f19115;
+  --provider-option-text-active: #f19115;
+  --provider-name-text: #e8e9ea;
+  --provider-model-text: #b8bcc8;
+  --provider-status-active: #4caf50;
+}

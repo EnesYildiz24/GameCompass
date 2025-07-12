@@ -1,0 +1,769 @@
+/* DeploymentPlan.css – Styling für die Deployment Plan Seite */
+
+.deployment-plan-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  line-height: 1.6;
+}
+
+.deployment-plan-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.deployment-plan-container h1 .gradient-text {
+  background: linear-gradient(45deg, #f19115, #5c8791);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.wiki-container.dark .deployment-plan-container h1 .gradient-text {
+  background: linear-gradient(45deg, #f19115, #8bc34a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.deployment-plan-container h1 .rocket-emoji {
+  margin-right: 0.5rem;
+}
+
+.wiki-container.light .deployment-plan-container h1 .rocket-emoji {
+  color: #333;
+}
+
+.wiki-container.dark .deployment-plan-container h1 .rocket-emoji {
+  color: #e0dfe5;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 4px solid #f19115;
+}
+
+.wiki-container.light .section {
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.wiki-container.dark .section {
+  background-color: #2d2e35;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.section h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #f19115;
+}
+
+/* Tabellen */
+.table-container {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+}
+
+.deployment-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.deployment-table th,
+.deployment-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid;
+}
+
+.wiki-container.light .deployment-table th,
+.wiki-container.light .deployment-table td {
+  border-color: #e0e0e0;
+}
+
+.wiki-container.dark .deployment-table th,
+.wiki-container.dark .deployment-table td {
+  border-color: #444;
+}
+
+.deployment-table th {
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: linear-gradient(45deg, #f19115, #5c8791);
+  color: white;
+}
+
+.wiki-container.dark .deployment-table th {
+  background: linear-gradient(45deg, #f19115, #8bc34a);
+}
+
+.wiki-container.light .deployment-table {
+  background-color: #ffffff;
+}
+
+.wiki-container.dark .deployment-table {
+  background-color: #2d2e35;
+}
+
+.deployment-table tr:nth-child(even) {
+  background-color: rgba(0,0,0,0.02);
+}
+
+.wiki-container.dark .deployment-table tr:nth-child(even) {
+  background-color: rgba(255,255,255,0.05);
+}
+
+.deployment-table tr:hover {
+  background-color: rgba(241, 145, 21, 0.1);
+}
+
+.deployment-table td:first-child {
+  font-weight: 600;
+}
+
+.wiki-container.light .deployment-table td:first-child {
+  color: #f19115;
+}
+
+.wiki-container.dark .deployment-table td:first-child {
+  color: #f19115;
+}
+
+/* Code Blocks */
+.code-block {
+  margin: 1rem 0;
+  border-radius: 6px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.code-block pre {
+  margin: 0;
+  padding: 1.5rem;
+  font-family: 'Courier New', 'Monaco', monospace;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  overflow-x: auto;
+}
+
+.wiki-container.light .code-block pre {
+  background-color: #2d2d2d;
+  color: #f8f8f2;
+}
+
+.wiki-container.dark .code-block pre {
+  background-color: #1a1a1a;
+  color: #f8f8f2;
+}
+
+.mermaid-note {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+/* 🚀 MODERN MERMAID STYLES - Website Branding */
+.mermaid-container-modern {
+  margin: 3rem 0;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  backdrop-filter: blur(20px);
+  background: linear-gradient(135deg, 
+    rgba(241, 145, 21, 0.05) 0%, 
+    rgba(255, 255, 255, 0.8) 30%,
+    rgba(92, 135, 145, 0.05) 100%);
+  border: 1px solid rgba(241, 145, 21, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(241, 145, 21, 0.1),
+    0 4px 16px rgba(92, 135, 145, 0.1),
+    0 0 0 1px rgba(241, 145, 21, 0.1) inset;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: slideInUp 0.6s ease-out;
+}
+
+.wiki-container.dark .mermaid-container-modern {
+  background: linear-gradient(135deg, 
+    rgba(241, 145, 21, 0.08) 0%, 
+    rgba(45, 46, 53, 0.9) 30%,
+    rgba(139, 195, 74, 0.08) 100%);
+  border: 1px solid rgba(139, 195, 74, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 4px 16px rgba(241, 145, 21, 0.2),
+    0 0 0 1px rgba(139, 195, 74, 0.1) inset;
+}
+
+.mermaid-container-modern:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+}
+
+/* Header mit Status-Indicator */
+.mermaid-header {
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, 
+    rgba(241, 145, 21, 0.08) 0%, 
+    rgba(92, 135, 145, 0.08) 50%,
+    rgba(241, 145, 21, 0.05) 100%);
+  border-bottom: 1px solid rgba(241, 145, 21, 0.2);
+}
+
+.wiki-container.dark .mermaid-header {
+  background: linear-gradient(135deg, 
+    rgba(241, 145, 21, 0.12) 0%, 
+    rgba(139, 195, 74, 0.12) 50%,
+    rgba(241, 145, 21, 0.08) 100%);
+  border-bottom: 1px solid rgba(139, 195, 74, 0.3);
+}
+
+.mermaid-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mermaid-icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.mermaid-icon:hover {
+  transform: rotate(15deg) scale(1.1);
+}
+
+.mermaid-title h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #f19115, #5c8791);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.wiki-container.dark .mermaid-title h3 {
+  background: linear-gradient(45deg, #f19115, #8bc34a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.mermaid-status {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.status-loading {
+  color: #f19115;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.status-ready {
+  color: #8bc34a;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.wiki-container.light .status-ready {
+  color: #5c8791;
+}
+
+.status-error {
+  color: #e74c3c;
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Diagramm Container */
+.mermaid-diagram-modern {
+  min-height: 400px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.05) 0%, 
+    rgba(255, 255, 255, 0.02) 100%);
+}
+
+.wiki-container.dark .mermaid-diagram-modern {
+  background: linear-gradient(135deg, 
+    rgba(45, 46, 53, 0.3) 0%, 
+    rgba(45, 46, 53, 0.1) 100%);
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  color: #5c8791;
+}
+
+.wiki-container.dark .loading-spinner {
+  color: #8bc34a;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(241, 145, 21, 0.2);
+  border-top: 3px solid #f19115;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  box-shadow: 0 0 20px rgba(241, 145, 21, 0.3);
+}
+
+.wiki-container.dark .spinner {
+  border: 3px solid rgba(139, 195, 74, 0.2);
+  border-top: 3px solid #8bc34a;
+  box-shadow: 0 0 20px rgba(139, 195, 74, 0.3);
+}
+
+.loading-spinner p {
+  font-weight: 500;
+  opacity: 0.8;
+  animation: fade 2s ease-in-out infinite;
+}
+
+/* Error State */
+.error-state {
+  text-align: center;
+  color: #ff6b6b;
+  padding: 2rem;
+}
+
+.error-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.error-state h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.error-state p {
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* SVG Styling Override */
+.mermaid-svg-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mermaid-svg-container svg {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.mermaid-svg-container:hover svg {
+  transform: scale(1.02);
+  filter: drop-shadow(0 15px 35px rgba(0,0,0,0.25)) !important;
+}
+
+/* Fallback für direkte SVG */
+.mermaid-diagram-modern svg {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  filter: drop-shadow(0 10px 30px rgba(0,0,0,0.2));
+  transition: all 0.3s ease;
+}
+
+.mermaid-diagram-modern svg:hover {
+  transform: scale(1.02);
+  filter: drop-shadow(0 15px 35px rgba(0,0,0,0.25));
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mermaid-container-modern {
+    margin: 2rem 0;
+    border-radius: 15px;
+  }
+  
+  .mermaid-header {
+    padding: 1rem 1.5rem;
+  }
+  
+  .mermaid-title h3 {
+    font-size: 1.1rem;
+  }
+  
+  .mermaid-diagram-modern {
+    min-height: 300px;
+    padding: 1rem;
+  }
+  
+  .mermaid-icon {
+    font-size: 1.2rem;
+  }
+}
+
+/* 🌟 ANIMATIONS */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 5px currentColor; }
+  to { text-shadow: 0 0 20px currentColor; }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  75% { transform: translateX(3px); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fade {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0.4; }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+/* Legacy Mermaid Container (Falls noch verwendet) */
+.mermaid-container {
+  margin: 2rem 0;
+}
+
+.mermaid-diagram {
+  margin-bottom: 1.5rem;
+}
+
+.diagram-placeholder {
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.wiki-container.light .diagram-placeholder {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border: 2px dashed #dee2e6;
+}
+
+.wiki-container.dark .diagram-placeholder {
+  background: linear-gradient(135deg, #2d2e35, #3a3b42);
+  border: 2px dashed #495057;
+}
+
+.diagram-placeholder h3 {
+  margin: 0 0 2rem 0;
+  color: #f19115;
+  font-size: 1.4rem;
+}
+
+.architecture-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.flow-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.flow-step.platforms {
+  flex-direction: row;
+  gap: 3rem;
+}
+
+.node {
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  min-width: 150px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.wiki-container.light .node {
+  background-color: #ffffff;
+  border: 2px solid #f19115;
+  color: #333;
+}
+
+.wiki-container.dark .node {
+  background-color: #2d2e35;
+  border: 2px solid #f19115;
+  color: #e0dfe5;
+}
+
+.node.internet {
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  color: white;
+  border-color: #0056b3;
+}
+
+.node.load-balancer {
+  background: linear-gradient(45deg, #f19115, #e67e00);
+  color: white;
+  border-color: #e67e00;
+}
+
+.node.frontend {
+  background: linear-gradient(45deg, #28a745, #1e7e34);
+  color: white;
+  border-color: #1e7e34;
+}
+
+.node.backend {
+  background: linear-gradient(45deg, #dc3545, #c82333);
+  color: white;
+  border-color: #c82333;
+}
+
+.node.ollama {
+  background: linear-gradient(45deg, #6f42c1, #5a2d91);
+  color: white;
+  border-color: #5a2d91;
+}
+
+.node.mongodb {
+  background: linear-gradient(45deg, #17a2b8, #138496);
+  color: white;
+  border-color: #138496;
+}
+
+.arrow {
+  font-weight: 600;
+  color: #f19115;
+  font-size: 0.9rem;
+}
+
+.arrows {
+  display: flex;
+  gap: 2rem;
+}
+
+.vpc-section {
+  margin-top: 1rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 2px dashed #6c757d;
+}
+
+.wiki-container.light .vpc-section {
+  background-color: rgba(108, 117, 125, 0.1);
+}
+
+.wiki-container.dark .vpc-section {
+  background-color: rgba(108, 117, 125, 0.2);
+}
+
+.vpc-section h4 {
+  margin: 0 0 1rem 0;
+  color: #6c757d;
+  text-align: center;
+}
+
+.vpc-services {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.code-toggle {
+  margin-top: 1rem;
+}
+
+.code-toggle details {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.wiki-container.light .code-toggle details {
+  border: 1px solid #dee2e6;
+}
+
+.wiki-container.dark .code-toggle details {
+  border: 1px solid #495057;
+}
+
+.code-toggle summary {
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  background: linear-gradient(45deg, #f19115, #5c8791);
+  color: white;
+  border: none;
+}
+
+.wiki-container.dark .code-toggle summary {
+  background: linear-gradient(45deg, #f19115, #8bc34a);
+}
+
+.code-toggle summary:hover {
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .flow-step.platforms {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .arrows {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .vpc-services {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .node {
+    min-width: 120px;
+    padding: 0.8rem 1rem;
+  }
+}
+
+/* Inline Code */
+code {
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-family: 'Courier New', 'Monaco', monospace;
+  font-size: 0.9rem;
+}
+
+.wiki-container.light code {
+  background-color: #e8e8e8;
+  color: #2d5a87;
+}
+
+.wiki-container.dark code {
+  background-color: #3a3a3a;
+  color: #87ceeb;
+}
+
+/* Secrets Liste */
+.secrets-list {
+  list-style: none;
+  padding: 0;
+}
+
+.secrets-list li {
+  position: relative;
+  padding: 1rem 0 1rem 2.5rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.secrets-list li::before {
+  content: '🔑';
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  font-size: 1.2rem;
+}
+
+.wiki-container.light .secrets-list li:hover {
+  background-color: rgba(241, 145, 21, 0.05);
+}
+
+.wiki-container.dark .secrets-list li:hover {
+  background-color: rgba(241, 145, 21, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .deployment-plan-container {
+    padding: 1rem;
+  }
+  
+  .deployment-plan-container h1 {
+    font-size: 2rem;
+  }
+  
+  .section {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .code-block pre {
+    padding: 1rem;
+    font-size: 0.7rem;
+  }
+  
+  .deployment-table th,
+  .deployment-table td {
+    padding: 0.8rem 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .deployment-table th {
+    font-size: 0.8rem;
+  }
+} 

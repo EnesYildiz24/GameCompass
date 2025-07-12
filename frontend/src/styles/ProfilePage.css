@@ -1,0 +1,359 @@
+.profile-page-container {
+  background-color: var(--page-bg, #f5f7fa);
+  min-height: calc(100vh - 115px);
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s;
+  color: var(--section-text, #333);
+  padding-top: 2rem;
+  margin-top: 0;
+}
+
+.profile-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  flex: 1;
+}
+
+.profile-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--section-text, #333);
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.profile-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: var(--header-bg, #5c8791);
+  border-radius: 3px;
+}
+
+.profile-layout {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Profilbild-Bereich */
+.profile-image-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 300px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-image-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.profile-image, .profile-image-placeholder {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--header-bg, #5c8791);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid var(--header-bg, #5c8791);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  position: relative;
+}
+
+.profile-image {
+  object-fit: cover;
+  object-position: center;
+  image-rendering: -webkit-optimize-contrast; /* Für Chrome/Safari */
+  image-rendering: crisp-edges; /* Für Firefox */
+  -ms-interpolation-mode: nearest-neighbor; /* Für IE */
+}
+
+/* Hinzufügen eines Lade-Overlays während der Bildverarbeitung */
+.profile-image-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+/* Verbesserte Hover-Effekte für das Profilbild */
+.profile-image-container:hover .profile-image,
+.profile-image-container:hover .profile-image-placeholder {
+  transform: scale(1.03);
+  border-color: var(--new-chat-btn-hover, #4a6e77);
+}
+
+.profile-image-placeholder svg {
+  width: 70%;
+  height: 70%;
+}
+
+.upload-button {
+  background-color: var(--header-bg, #5c8791);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+}
+
+.upload-button:hover {
+  background-color: var(--new-chat-btn-hover, #4a6e77);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Benutzerinformationen-Bereich */
+.profile-info-section {
+  flex: 2;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-info-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.form-group {
+  margin-bottom: 1.8rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+  color: var(--section-text, #333);
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--border-color, #e0e0e0);
+  border-radius: 10px;
+  background-color: var(--input-bg, white);
+  color: var(--input-text, #333);
+  transition: all 0.3s;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--header-bg, #5c8791);
+  box-shadow: 0 0 0 3px rgba(92, 135, 145, 0.2);
+}
+
+.form-group input.editable {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-color: var(--header-bg, #5c8791);
+}
+
+.form-group input:disabled {
+  background-color: var(--input-disabled-bg, #f5f5f5);
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.button-group {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  justify-content: flex-start;
+}
+
+.edit-button, .save-button, .cancel-button {
+  padding: 0.9rem 1.8rem;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: none;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-button, .save-button {
+  background-color: var(--header-bg, #5c8791);
+  color: white;
+}
+
+.edit-button:hover, .save-button:hover {
+  background-color: var(--new-chat-btn-hover, #4a6e77);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.cancel-button {
+  background-color: var(--clear-history-btn, #e74c3c);
+  color: white;
+}
+
+.cancel-button:hover {
+  background-color: var(--clear-history-btn-hover, #c0392b);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Nachrichtenbereich für Erfolg/Fehler */
+.message {
+  padding: 1.2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.message.success {
+  background-color: rgba(46, 204, 113, 0.15);
+  color: #27ae60;
+  border-left: 4px solid #27ae60;
+}
+
+.message.error {
+  background-color: rgba(231, 76, 60, 0.15);
+  color: #c0392b;
+  border-left: 4px solid #c0392b;
+}
+
+/* Spielebibliothek-Bereich */
+.game-library-section {
+  margin-top: 3rem;
+  padding: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.game-library-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.library-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--section-text, #333);
+  border-bottom: 2px solid var(--header-bg, #5c8791);
+  padding-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+.game-library-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 12px;
+  color: var(--text-secondary, #666);
+  font-style: italic;
+  border: 2px dashed rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+
+.game-library-placeholder:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-color: var(--header-bg, #5c8791);
+}
+
+.game-library-placeholder p {
+  font-size: 1.1rem;
+  max-width: 80%;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .profile-layout {
+    flex-direction: column;
+  }
+  
+  .profile-image-container {
+    margin-bottom: 2rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-title {
+    font-size: 2rem;
+  }
+  
+  .profile-image, .profile-image-placeholder {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .button-group {
+    flex-direction: column;
+  }
+  
+  .edit-button, .save-button, .cancel-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-content {
+    padding: 1rem;
+  }
+  
+  .profile-info-section, 
+  .profile-image-container, 
+  .game-library-section {
+    padding: 1.5rem;
+  }
+  
+  .profile-image, .profile-image-placeholder {
+    width: 150px;
+    height: 150px;
+  }
+} 

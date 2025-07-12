@@ -1,0 +1,260 @@
+/* Authentifizierung.css */
+
+.auth-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  line-height: 1.6;
+}
+
+.auth-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.auth-container h1 .gradient-text {
+  background: linear-gradient(45deg, #f19115, #5c8791);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.wiki-container.dark .auth-container h1 .gradient-text {
+  background: linear-gradient(45deg, #f19115, #8bc34a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.auth-container h1 .auth-emoji {
+  margin-right: 0.5rem;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 4px solid #f19115;
+}
+
+.wiki-container.light .section {
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.wiki-container.dark .section {
+  background-color: #2d2e35;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.section h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #f19115;
+}
+
+/* OAuth Flow */
+.oauth-flow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.flow-step {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.wiki-container.light .flow-step {
+  background-color: #ffffff;
+  border-color: #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.wiki-container.dark .flow-step {
+  background-color: #3a3b42;
+  border-color: #555;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.flow-step:hover {
+  transform: translateY(-2px);
+  border-color: #f19115;
+}
+
+.step-number {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: #f19115;
+  color: white;
+  border-radius: 50%;
+  line-height: 30px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.step-content h4 {
+  margin: 0 0 0.5rem 0;
+  color: #f19115;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.step-content p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Config Overview */
+.config-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.config-card {
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid;
+}
+
+.wiki-container.light .config-card {
+  background-color: #ffffff;
+  border-color: #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.wiki-container.dark .config-card {
+  background-color: #3a3b42;
+  border-color: #555;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.config-card h4 {
+  margin: 0 0 1rem 0;
+  color: #f19115;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.config-card p {
+  margin: 0 0 1rem 0;
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+.config-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.config-card li {
+  padding: 0.3rem 0;
+  font-size: 0.9rem;
+  font-family: 'Courier New', monospace;
+  opacity: 0.8;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.config-card li::before {
+  content: '→';
+  color: #f19115;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Security Measures */
+.security-measures {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.security-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid;
+}
+
+.wiki-container.light .security-item {
+  background-color: rgba(139, 195, 74, 0.05);
+  border-color: rgba(139, 195, 74, 0.2);
+}
+
+.wiki-container.dark .security-item {
+  background-color: rgba(139, 195, 74, 0.1);
+  border-color: rgba(139, 195, 74, 0.3);
+}
+
+.security-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.security-item h4 {
+  margin: 0 0 0.3rem 0;
+  color: #8bc34a;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.security-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .auth-container {
+    padding: 1rem;
+  }
+  
+  .auth-container h1 {
+    font-size: 2rem;
+  }
+  
+  .section {
+    padding: 1.5rem;
+  }
+  
+  .oauth-flow {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .config-overview {
+    grid-template-columns: 1fr;
+  }
+  
+  .security-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+} 

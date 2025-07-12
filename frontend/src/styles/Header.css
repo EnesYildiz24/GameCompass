@@ -1,0 +1,260 @@
+.profile-icon {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.profile-icon:hover {
+  transform: scale(1.05);
+}
+
+.profile-menu {
+  position: absolute;
+  top: 80px;
+  right: 40px;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 12px;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+  animation: fadeIn 0.2s ease;
+}
+
+.profile-header {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile-username {
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+.profile-arrow {
+  font-size: 10px;
+  color: var(--text-secondary);
+}
+
+.profile-option {
+  cursor: pointer;
+  padding: 8px;
+  margin-bottom: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  color: var(--text-color);
+}
+
+.profile-option:hover {
+  background-color: var(--hover-color);
+}
+
+.profile-option.logout {
+  color: #e53935;
+}
+
+.profile-option.logout:hover {
+  background-color: rgba(229, 57, 53, 0.1);
+}
+
+.language-menu {
+  position: absolute;
+  top: 80px;
+  right: 40px;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 12px;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+  animation: fadeIn 0.2s ease;
+}
+
+.language-option {
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  color: var(--text-color);
+}
+
+.language-option:hover {
+  background-color: var(--hover-color);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dunkelmodus-Variablen */
+:root {
+  --bg-color: white;
+  --text-color: #333;
+  --text-secondary: #666;
+  --border-color: #e0e0e0;
+  --hover-color: #f5f5f5;
+}
+
+[data-theme='dark'] {
+  --bg-color: #2d2d2d;
+  --text-color: #e0e0e0;
+  --text-secondary: #aaa;
+  --border-color: #444;
+  --hover-color: #3d3d3d;
+}
+
+/* Hover-Effekt für das Sprachicon */
+#home-Sprache_icon_oben {
+  transition: transform 0.2s ease;
+}
+
+#home-Sprache_icon_oben:hover {
+  transform: scale(1.05) translate(-315px, -9.5px);
+}
+
+/* Navigation Hover-Effekte */
+#home-Home {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+#home-Home:hover text {
+  fill: #f19115;
+  font-weight: bold;
+}
+
+#home-Entdecken {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+#home-Entdecken:hover text {
+  fill: #f19115;
+  font-weight: bold;
+}
+
+#home-Verkaufen_2 {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+#home-Verkaufen_2:hover text {
+  fill: #f19115;
+  font-weight: bold;
+}
+
+#home-support-oben {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+#home-support-oben:hover text {
+  fill: #f19115;
+  font-weight: bold;
+}
+
+/* Hilfe-Icon Hover-Effekt */
+#home-Help {
+  transition: transform 0.2s ease;
+}
+
+#home-Help:hover {
+  transform: translate(-5px, 6px) scale(1.05);
+}
+
+#home-Help:hover .help-hover-area {
+  fill: rgba(241, 145, 21, 0.1);
+}
+
+#home-Help:hover circle {
+  stroke-width: 3px;
+  filter: drop-shadow(0 0 8px rgba(241, 145, 21, 0.5));
+}
+
+/* Wiki-Icon Hover-Effekt */
+.wiki-hover-area:hover {
+  fill: rgba(224, 223, 229, 0.08);
+  rx: 8;
+  ry: 8;
+}
+
+[data-theme='dark'] .wiki-hover-area:hover {
+  fill: rgba(224, 223, 229, 0.12);
+}
+
+/* Wiki-Icon Transition */
+#home-Wiki {
+  transition: transform 0.2s ease;
+}
+
+#home-Wiki:hover {
+  transform: translate(20px, 6px) scale(1.05);
+}
+
+/* Wiki-Text Hover-Effekt */
+#home-Wiki:hover text {
+  fill: #5c8791;
+  transition: fill 0.2s ease;
+}
+
+/* Warenkorb Hover-Effekt */
+#home-Warenkorb {
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+#home-Warenkorb:hover {
+  transform: translate(-30px, -2px) scale(1.05);
+}
+
+#home-Warenkorb:hover path,
+#home-Warenkorb:hover circle {
+  fill: #f19115;
+  transition: fill 0.2s ease;
+}
+
+/* Logo und Titel Hover-Effekt */
+#home-GAMECOMPASS_Oben {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+#home-GAMECOMPASS_Oben:hover text {
+  fill: #f19115;
+}
+
+#home-Logo_oben {
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+#home-Logo_oben:hover {
+  transform: scale(1.05);
+}
+
+/* Dark/Light Mode Toggle Hover */
+#home-Lightmode {
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+#home-Lightmode:hover {
+  transform: scale(1.05);
+}

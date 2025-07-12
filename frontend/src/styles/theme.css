@@ -1,0 +1,88 @@
+:root {
+  /* Light-Mode (Default) */
+  --header-bg: #5c8791;
+  --footer-bg: #5c8791;
+  --page-bg: #ffffff;
+  --swipe-fill: #010101;
+  --dragon-img: url("/images/drachensymbol1.png");
+  --toggle-x: 0px;
+  --section-text: #000000; /* Schwarzer Text im Light-Mode */
+}
+
+:root[data-theme='dark'] {
+  --header-bg: #25252c;
+  --footer-bg: #25252c;
+  --page-bg: #34353b; /* Hintergrundfarbe im Dark Mode */
+  --swipe-fill: #ffffff;
+  --dragon-img: url("/images/drachensymbol2.png");
+  --toggle-x: 34px; /* Abstand für den Slider-Kreis */
+  --section-text: #ffffff; /* Weißer Text im Dark-Mode */
+}
+
+/* Header-Balken */
+#home-Balken_oben .home-cls-13 {
+  fill: var(--header-bg) !important;
+  transition: fill 0.3s;
+}
+
+/* Footer-Balken */
+#Balken_unten .cls-16 {
+  fill: var(--footer-bg) !important;
+  transition: fill 0.3s;
+}
+
+/* Hintergrund LandingPage */
+.svg-container {
+  background: var(--page-bg);
+  transition: background 0.3s;
+}
+
+/* Pfeile/Swipes */
+#oben_links_swipe path,
+#oben_rechts_swipe path,
+#genres_links_swipe path,
+#genres_rechts_swap path,
+#meistgekauft_links_swipe path,
+#meistgekauft_rechts_swipe path,
+#meistgespielt_links_swipe path,
+#meistgespielt_rechts_swipe path,
+#kostenlos_links_swipe path,
+#kostenlos_rechts_swipe path {
+  fill: var(--swipe-fill) !important;
+  transition: fill 0.3s;
+}
+
+/* Sektions-Überschriften - Text wird im Dark-Mode weiß */
+#Beliebte_Genres text tspan,
+#Meistgekauft text tspan,
+#Meistgespielt text tspan,
+#Kostenlose_Spiele text tspan {
+  fill: var(--section-text) !important;
+  transition: fill 0.3s;
+}
+
+/* AboutUs Komponente - Dark Mode Anpassungen */
+:root[data-theme='dark'] #text1 text tspan,
+:root[data-theme='dark'] #Support_überschrift text tspan,
+:root[data-theme='dark'] #_Über_uns_überschrift text tspan {
+  fill: #ffffff !important;
+  transition: fill 0.3s;
+}
+
+/* AboutUs Hintergrund im Dark Mode */
+:root[data-theme='dark'] .AboutUsContainer svg {
+  background-color: #34353b;
+  transition: background-color 0.3s;
+} 
+
+
+/* Placeholder für das Suchfeld im Darkmode */
+.suchfeld-darkmode::placeholder {
+  color: #bdbdbd !important;
+  opacity: 1;
+}
+
+body[data-theme='dark'] .suchfeld-darkmode::placeholder {
+  color: #bdbdbd !important;
+  opacity: 1;
+} 

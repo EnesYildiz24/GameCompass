@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76.62 86.53">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f19115;
+      }
+
+      .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #eceff1;
+      }
+    </style>
+  </defs>
+  <g id="Profil">
+    <g id="Profil-2" data-name="Profil">
+      <circle id="orange" class="cls-1" cx="38.31" cy="34.14" r="34.14"/>
+      <circle id="weiß" class="cls-3" cx="38.31" cy="27.13" r="13.13" transform="translate(-2.11 3.25) rotate(-4.73)"/>
+      <path id="weiß-2" data-name="weiß" class="cls-2" d="M62.41,58.31l-.61-1.01c-4.69-8.09-13.45-13.54-23.49-13.54s-18.81,5.46-23.5,13.57l-.02.04-.54.97c6.17,6.13,14.68,9.93,24.07,9.93s17.93-3.81,24.1-9.96Z"/>
+    </g>
+  </g>
+  <g id="text">
+    <text/>
+  </g>
+</svg>

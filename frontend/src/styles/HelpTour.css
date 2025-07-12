@@ -1,0 +1,229 @@
+/* Zusätzliche Styles für die HelpTour */
+.help-tour-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10000;
+  backdrop-filter: blur(2px);
+}
+
+.help-tour-highlight {
+  position: fixed;
+  border: 4px solid #f19115;
+  border-radius: 12px;
+  box-shadow: 
+    0 0 20px rgba(241, 145, 21, 0.8),
+    inset 0 0 20px rgba(241, 145, 21, 0.3),
+    0 0 40px rgba(241, 145, 21, 0.5);
+  pointer-events: none;
+  z-index: 9999;
+  background: rgba(241, 145, 21, 0.1);
+  animation: tour-pulse 2s infinite;
+}
+
+/* Spezielle Highlight-Effekte für Navigation */
+.navigation-highlight {
+  border: 3px solid #f19115;
+  border-radius: 8px;
+  box-shadow: 
+    0 0 15px rgba(241, 145, 21, 0.9),
+    inset 0 0 15px rgba(241, 145, 21, 0.4),
+    0 0 30px rgba(241, 145, 21, 0.6);
+  background: linear-gradient(45deg, 
+    rgba(241, 145, 21, 0.1), 
+    rgba(241, 145, 21, 0.2)
+  );
+  animation: navigation-glow 2.5s infinite;
+}
+
+@keyframes navigation-glow {
+  0% { 
+    border-color: #f19115;
+    box-shadow: 
+      0 0 15px rgba(241, 145, 21, 0.9),
+      inset 0 0 15px rgba(241, 145, 21, 0.4),
+      0 0 30px rgba(241, 145, 21, 0.6);
+  }
+  50% { 
+    border-color: #ff9f00;
+    box-shadow: 
+      0 0 25px rgba(255, 159, 0, 1),
+      inset 0 0 25px rgba(255, 159, 0, 0.5),
+      0 0 50px rgba(255, 159, 0, 0.8);
+  }
+  100% { 
+    border-color: #f19115;
+    box-shadow: 
+      0 0 15px rgba(241, 145, 21, 0.9),
+      inset 0 0 15px rgba(241, 145, 21, 0.4),
+      0 0 30px rgba(241, 145, 21, 0.6);
+  }
+}
+
+@keyframes tour-pulse {
+  0% { 
+    transform: scale(1); 
+    opacity: 1;
+    box-shadow: 
+      0 0 20px rgba(241, 145, 21, 0.8),
+      inset 0 0 20px rgba(241, 145, 21, 0.3),
+      0 0 40px rgba(241, 145, 21, 0.5);
+  }
+  50% { 
+    transform: scale(1.05); 
+    opacity: 0.8;
+    box-shadow: 
+      0 0 30px rgba(241, 145, 21, 1),
+      inset 0 0 30px rgba(241, 145, 21, 0.5),
+      0 0 60px rgba(241, 145, 21, 0.7);
+  }
+  100% { 
+    transform: scale(1); 
+    opacity: 1;
+    box-shadow: 
+      0 0 20px rgba(241, 145, 21, 0.8),
+      inset 0 0 20px rgba(241, 145, 21, 0.3),
+      0 0 40px rgba(241, 145, 21, 0.5);
+  }
+}
+
+.help-tour-card {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.95) 0%, 
+    rgba(255, 255, 255, 0.9) 100%
+  );
+  border: 2px solid #f19115;
+  border-radius: 15px;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(241, 145, 21, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+[data-theme='dark'] .help-tour-card {
+  background: linear-gradient(135deg, 
+    rgba(44, 44, 44, 0.95) 0%, 
+    rgba(44, 44, 44, 0.9) 100%
+  );
+  color: #e1e1e1;
+}
+
+.help-tour-progress-bar {
+  background: linear-gradient(90deg, 
+    #f19115 0%, 
+    #e08010 50%, 
+    #f19115 100%
+  );
+  background-size: 200% 100%;
+  animation: progress-shimmer 2s infinite;
+}
+
+@keyframes progress-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.help-tour-button {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.help-tour-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.5s;
+}
+
+.help-tour-button:hover::before {
+  left: 100%;
+}
+
+.help-tour-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.help-tour-button:active {
+  transform: translateY(0);
+}
+
+/* Gaming-inspirierte Icons Animation */
+.help-tour-card h2 {
+  background: linear-gradient(45deg, #f19115, #ff9f00, #f19115);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: title-glow 3s ease-in-out infinite;
+}
+
+@keyframes title-glow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Icon Pulse Animation */
+.help-tour-card > div:first-of-type {
+  animation: icon-bounce 2s infinite;
+}
+
+@keyframes icon-bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 768px) {
+  .help-tour-card {
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  .help-tour-highlight {
+    border-width: 3px;
+  }
+  
+  .navigation-highlight {
+    border-width: 2px;
+  }
+}
+
+/* Accessibility */
+.help-tour-card:focus-within {
+  outline: 2px solid #f19115;
+  outline-offset: 4px;
+}
+
+/* Animationen für bessere UX */
+.help-tour-card {
+  animation: tour-card-enter 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes tour-card-enter {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Spezielle Hover-Verstärkung für markierte Elemente während der Tour */
+.tour-active #home-Home:hover,
+.tour-active #home-Entdecken:hover,
+.tour-active #home-Verkaufen_2:hover,
+.tour-active #home-support-oben:hover {
+  filter: drop-shadow(0 0 12px rgba(241, 145, 21, 0.7));
+} 

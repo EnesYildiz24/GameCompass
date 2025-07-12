@@ -1,0 +1,556 @@
+/* ModelDetail.css – Styling für alle Model Detail Seiten */
+
+/* Model Detail Container */
+.model-detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.model-detail-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.model-detail-container h1 span:first-child {
+  font-size: 2rem;
+}
+
+.model-detail-container .subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+  text-align: center;
+}
+
+/* Section Styling */
+.section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.wiki-container.light .section {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border: 1px solid rgba(241, 145, 21, 0.1);
+}
+
+.wiki-container.dark .section {
+  background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+  border: 1px solid rgba(241, 145, 21, 0.2);
+}
+
+.section h2 {
+  color: #f19115;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Code Blocks */
+.code-block {
+  background: #1a1a1a;
+  color: #f8f8f2;
+  padding: 1.5rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1rem 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.code-block pre {
+  margin: 0;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.code-block code {
+  background: none;
+  padding: 0;
+  border: none;
+  color: inherit;
+}
+
+/* Tables */
+.fields-table {
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.fields-table table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fields-table th,
+.fields-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(241, 145, 21, 0.1);
+}
+
+.wiki-container.light .fields-table th {
+  background-color: #f19115;
+  color: white;
+  font-weight: 600;
+}
+
+.wiki-container.dark .fields-table th {
+  background-color: #f19115;
+  color: white;
+  font-weight: 600;
+}
+
+.wiki-container.light .fields-table tr:nth-child(even) {
+  background-color: rgba(241, 145, 21, 0.05);
+}
+
+.wiki-container.dark .fields-table tr:nth-child(even) {
+  background-color: rgba(241, 145, 21, 0.1);
+}
+
+.fields-table code {
+  background: rgba(241, 145, 21, 0.1);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'Monaco', 'Menlo', monospace;
+  font-size: 0.85rem;
+  color: #f19115;
+}
+
+/* Relationships List */
+.relationships-list {
+  list-style: none;
+  padding: 0;
+}
+
+.relationships-list li {
+  padding: 0.8rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 6px;
+  border-left: 4px solid #f19115;
+}
+
+.wiki-container.light .relationships-list li {
+  background-color: rgba(241, 145, 21, 0.05);
+}
+
+.wiki-container.dark .relationships-list li {
+  background-color: rgba(241, 145, 21, 0.1);
+}
+
+.relationships-list strong {
+  color: #f19115;
+}
+
+/* Methods Grid */
+.methods-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+/* Validation Grid */
+.validation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.validation-card {
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(241, 145, 21, 0.2);
+  transition: all 0.3s ease;
+}
+
+.wiki-container.light .validation-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.wiki-container.dark .validation-card {
+  background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+}
+
+.validation-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(241, 145, 21, 0.2);
+  border-color: #f19115;
+}
+
+.validation-card h4 {
+  color: #f19115;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.validation-card p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.method-card {
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(241, 145, 21, 0.2);
+  transition: all 0.3s ease;
+}
+
+.wiki-container.light .method-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.wiki-container.dark .method-card {
+  background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+}
+
+.method-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(241, 145, 21, 0.2);
+  border-color: #f19115;
+}
+
+.method-card h4 {
+  color: #f19115;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.method-card p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.code-snippet {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 0.8rem;
+  border-radius: 4px;
+  border-left: 3px solid #f19115;
+  text-align: left;
+}
+
+.wiki-container.dark .code-snippet {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.code-snippet code {
+  font-family: 'Monaco', 'Menlo', monospace;
+  font-size: 0.85rem;
+  color: #f19115;
+}
+
+/* Status Flow (für BestellungModel) */
+.status-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.status-step {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+  min-width: 120px;
+}
+
+.wiki-container.light .status-step {
+  background-color: rgba(241, 145, 21, 0.1);
+}
+
+.wiki-container.dark .status-step {
+  background-color: rgba(241, 145, 21, 0.15);
+}
+
+.status-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.status-step strong {
+  color: #f19115;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.flow-arrow {
+  font-size: 1.5rem;
+  color: #f19115;
+  font-weight: bold;
+}
+
+/* Membership Levels (für BuyerModel) */
+.membership-levels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.level-card {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 2px solid;
+  transition: transform 0.3s ease;
+}
+
+.level-card:hover {
+  transform: scale(1.05);
+}
+
+.level-card.bronze {
+  border-color: #cd7f32;
+  background: linear-gradient(135deg, rgba(205, 127, 50, 0.1) 0%, rgba(205, 127, 50, 0.05) 100%);
+}
+
+.level-card.silver {
+  border-color: #c0c0c0;
+  background: linear-gradient(135deg, rgba(192, 192, 192, 0.1) 0%, rgba(192, 192, 192, 0.05) 100%);
+}
+
+.level-card.gold {
+  border-color: #ffd700;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
+}
+
+.level-card.platinum {
+  border-color: #e5e4e2;
+  background: linear-gradient(135deg, rgba(229, 228, 226, 0.1) 0%, rgba(229, 228, 226, 0.05) 100%);
+}
+
+.level-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Permissions Grid (für AdminModel) */
+.permissions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.permission-card {
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(241, 145, 21, 0.2);
+}
+
+.wiki-container.light .permission-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.wiki-container.dark .permission-card {
+  background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+}
+
+.permission-card h4 {
+  color: #f19115;
+  margin-bottom: 1rem;
+}
+
+.permission-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.permission-card li {
+  padding: 0.3rem 0;
+  font-family: 'Monaco', 'Menlo', monospace;
+  font-size: 0.85rem;
+  color: #5c8791;
+}
+
+/* Departments List (für AdminModel) */
+.departments-list {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.dept-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.wiki-container.light .dept-item {
+  background-color: rgba(241, 145, 21, 0.05);
+}
+
+.wiki-container.dark .dept-item {
+  background-color: rgba(241, 145, 21, 0.1);
+}
+
+.dept-icon {
+  font-size: 1.5rem;
+}
+
+/* Discount Types (für OfferModel) */
+.discount-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.discount-card {
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 2px solid #f19115;
+  text-align: center;
+}
+
+.wiki-container.light .discount-card {
+  background: linear-gradient(135deg, rgba(241, 145, 21, 0.1) 0%, rgba(241, 145, 21, 0.05) 100%);
+}
+
+.wiki-container.dark .discount-card {
+  background: linear-gradient(135deg, rgba(241, 145, 21, 0.15) 0%, rgba(241, 145, 21, 0.1) 100%);
+}
+
+/* Categories Grid (für ChatPromptModel) */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.category-card {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(241, 145, 21, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  border-color: #f19115;
+}
+
+.wiki-container.light .category-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.wiki-container.dark .category-card {
+  background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+}
+
+.cat-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Roles Info (für ChatHistoryModel) */
+.roles-info {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.role-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.wiki-container.light .role-item {
+  background-color: rgba(241, 145, 21, 0.05);
+}
+
+.wiki-container.dark .role-item {
+  background-color: rgba(241, 145, 21, 0.1);
+}
+
+.role-icon {
+  font-size: 1.5rem;
+}
+
+/* Rating Info (für BewertungModel) */
+.rating-info {
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #f19115;
+}
+
+.wiki-container.light .rating-info {
+  background: rgba(241, 145, 21, 0.05);
+}
+
+.wiki-container.dark .rating-info {
+  background: rgba(241, 145, 21, 0.1);
+}
+
+.rating-info p {
+  margin: 0.5rem 0;
+}
+
+.rating-info strong {
+  color: #f19115;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .model-detail-container {
+    padding: 1rem;
+  }
+  
+  .model-detail-container h1 {
+    font-size: 2rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .section {
+    padding: 1.5rem;
+  }
+  
+  .methods-grid,
+  .validation-grid,
+  .permissions-grid,
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .membership-levels {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .status-flow {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .flow-arrow {
+    transform: rotate(90deg);
+  }
+} 

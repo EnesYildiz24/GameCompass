@@ -1,0 +1,239 @@
+/* GitStrategie.css – Styling für die Git-Strategie Seite */
+
+.git-strategie-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  line-height: 1.6;
+}
+
+.git-strategie-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.git-strategie-container h1 .gradient-text {
+  background: linear-gradient(45deg, #f19115, #5c8791);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.wiki-container.dark .git-strategie-container h1 .gradient-text {
+  background: linear-gradient(45deg, #f19115, #8bc34a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.git-strategie-container h1 .brain-emoji {
+  margin-right: 0.5rem;
+}
+
+.wiki-container.light .git-strategie-container h1 .brain-emoji {
+  color: #333;
+}
+
+.wiki-container.dark .git-strategie-container h1 .brain-emoji {
+  color: #e0dfe5;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 4px solid #f19115;
+}
+
+.wiki-container.light .section {
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.wiki-container.dark .section {
+  background-color: #2d2e35;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.section h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #f19115;
+}
+
+.section ol,
+.section ul {
+  margin-left: 1.5rem;
+}
+
+.section li {
+  margin-bottom: 1rem;
+}
+
+/* Code Blocks */
+.code-block {
+  margin: 1rem 0;
+  border-radius: 6px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.code-block pre {
+  margin: 0;
+  padding: 1.5rem;
+  font-family: 'Courier New', 'Monaco', monospace;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  overflow-x: auto;
+}
+
+.wiki-container.light .code-block pre {
+  background-color: #2d2d2d;
+  color: #f8f8f2;
+}
+
+.wiki-container.dark .code-block pre {
+  background-color: #1a1a1a;
+  color: #f8f8f2;
+}
+
+/* Inline Code */
+code {
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-family: 'Courier New', 'Monaco', monospace;
+  font-size: 0.9rem;
+}
+
+.wiki-container.light code {
+  background-color: #e8e8e8;
+  color: #2d5a87;
+}
+
+.wiki-container.dark code {
+  background-color: #3a3a3a;
+  color: #87ceeb;
+}
+
+/* Commit Conventions */
+.commit-conventions {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.commit-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
+}
+
+.wiki-container.light .commit-item {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+}
+
+.wiki-container.dark .commit-item {
+  background-color: #3a3b42;
+  border: 1px solid #555;
+}
+
+.commit-item:hover {
+  transform: translateX(5px);
+}
+
+.commit-item code {
+  min-width: 80px;
+  margin-right: 1rem;
+  font-weight: 700;
+  color: #f19115;
+  background-color: transparent;
+  border: 2px solid #f19115;
+}
+
+.wiki-container.dark .commit-item code {
+  color: #f19115;
+  background-color: transparent;
+  border-color: #f19115;
+}
+
+.commit-item span {
+  flex: 1;
+}
+
+/* Tips List */
+.tips-list {
+  list-style: none;
+  padding: 0;
+}
+
+.tips-list li {
+  position: relative;
+  padding: 0.8rem 0 0.8rem 2rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.tips-list li::before {
+  content: '💡';
+  position: absolute;
+  left: 0;
+  top: 0.8rem;
+}
+
+.wiki-container.light .tips-list li:hover {
+  background-color: rgba(241, 145, 21, 0.05);
+}
+
+.wiki-container.dark .tips-list li:hover {
+  background-color: rgba(241, 145, 21, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .git-strategie-container {
+    padding: 1rem;
+  }
+  
+  .git-strategie-container h1 {
+    font-size: 2rem;
+  }
+  
+  .section {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .code-block pre {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .commit-item {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .commit-item code {
+    margin-bottom: 0.5rem;
+    margin-right: 0;
+  }
+} 

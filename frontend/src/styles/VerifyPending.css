@@ -1,0 +1,54 @@
+/* src/styles/VerifyPending.css */
+.verify-pending {
+    min-height: calc(100vh - 120px);     /* unter Header/Footer zentrieren */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  /* kleine Glas-Karte in der Mitte */
+  .verify-pending .card {
+    max-width: 620px;
+    color: var(--text) !important;
+    width: 100%;
+    text-align: center;
+    padding: 3rem 2rem;
+    border-radius: 24px;
+    box-shadow: 0 4px 20px rgba(0,0,0,.25);
+    backdrop-filter: blur(6px);
+  }
+  
+  /* 🌑 DARK-MODE (Standard) */
+  .verify-pending.dark {
+    --bg: #121417;
+    --card-bg: rgba(33, 37, 41, 0.85);
+    --text:     #ffffff;  
+  }
+  
+  .verify-pending.dark {
+    background: var(--bg);
+    color: var(--text);
+  }
+  
+  .verify-pending.dark .card {
+    background: var(--card-bg);
+  }
+  
+  /* 🌕 LIGHT-MODE */
+  .verify-pending.light {
+    --bg: #f8f9fa;
+    --card-bg: rgba(255, 255, 255, 0.85);
+    --text: #212529;
+  }
+  
+  .verify-pending.light {
+    background: var(--bg);
+    color: var(--text);
+  }
+  
+  .verify-pending.light .card {
+    background: var(--card-bg);
+  }
+  

@@ -1,0 +1,240 @@
+{
+  "brand": "GameCompass",
+  "nav.games": "Oyunlar",
+  "nav.sell": "Satış Yap",
+  "nav.about": "Hakkımızda",
+  "nav.login": "Giriş Yap",
+  "nav.logout": "Çıkış Yap",
+  "nav.search": "Ara",
+  "user.welcome": "Hoş geldiniz, {username}",
+  "user.logout": "Çıkış Yap",
+  "user.login": "Giriş Yap",
+  "language.de": "Almanca",
+  "language.en": "İngilizce",
+  "language.fr": "Fransızca",
+  "language.es": "İspanyolca",
+  "language.tr": "Türkçe",
+  "language.ru": "Rusça",
+  "genres": {
+    "adventure": "Macera",
+    "racing": "Yarış Oyunları",
+    "horror": "Korku",
+    "action": "Aksiyon",
+    "strategy": "Strateji"
+  },
+  "sections": {
+    "popularGenres": "Popüler Türler",
+    "mostPurchased": "En Çok Satın Alınanlar",
+    "mostPlayed": "En Çok Oynananlar",
+    "freeGames": "Ücretsiz Oyunlar",
+    "bestRated": "En İyi Puanlananlar",
+    "cheapGames": "15€'nun altındaki oyunlar",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Şartlar",
+    "imprint": "Künye",
+    "support": "Destek",
+    "language": "Dil:"
+  },
+
+  "login": {
+    "title": "Giriş Yap",
+    "email": "E-posta",
+    "password": "Şifre",
+    "error": {
+      "fillFields": "Lütfen tüm alanları doldurun.",
+      "invalid": "E-posta veya şifreniz geçersiz.",
+      "failed": "Giriş başarısız."
+    },
+    "loading": "Lütfen bekleyin…",
+    "submit": "Giriş",
+    "forgotPassword": "Şifrenizi mi unuttunuz?",
+    "noAccount": "Henüz hesabınız yok mu?",
+    "registerNow": "Şimdi kaydol",
+    "forgotSubmit": "Şifreyi sıfırla",
+    "forgotSuccess": "E-posta mevcutsa, bir bağlantı gönderildi."
+  },
+
+  "register": {
+    "title": "Kayıt Ol",
+    "username": "İsim",
+    "email": "E-posta",
+    "password": "Şifre",
+    "error": {
+      "fillFields": "Lütfen tüm alanları doldurun.",
+      "failed": "Kayıt başarısız."
+    },
+    "loading": "Lütfen bekleyin…",
+    "submit": "Kayıt Ol"
+  },
+  "landing": {
+    "title": "GameCompass Demo'ya Hoş Geldiniz",
+    "descPart1": "Gördüğünüz her şey henüz kesinleşmemiş olup değiştirilebilir.",
+    "descPart2": "Bu platform, dijital oyunlar ve oyun anahtarları alıp satmak için bir pazaryeri olarak hizmet veriyor. Şeffaf bir değerlendirme sistemi ve modern ödeme yöntemleri güvenlik ve kolaylık sağlıyor. Ayrıca, etkileşimli bir rehber yeni kullanıcıların video oyun dünyasına girişini kolaylaştırıyor.",
+    "cta": {
+      "explore": "Oyunları Keşfet",
+      "sell": "Şimdi Sat"
+    },
+    "heroImageAlt": "Demo platform önizleme resmi",
+    "features": {
+      "title": "Neden GameCompass?",
+      "reason1": { "title": "Neden 1", "desc": "blah blah blah" },
+      "reason2": { "title": "Neden 2", "desc": "blah blah blah 2" },
+      "reason3": { "title": "Neden 3", "desc": "blah blah blah 3" }
+    },
+    "modal": {
+      "loginTitle": "Giriş Yap",
+      "close": "Kapat"
+    }
+  },
+  
+  "positions": {
+    "privacy": { "x": "860.26" },
+    "terms": { "x": "985.56" },
+    "imprint": { "x": "1048.78" },
+    "support": { "x": "1108.6" },
+    "facebook": { "x": "1179.85", "y": "3821.55" },
+    "twitter": { "x": "1199.26", "y": "3819.61" },
+    "language": { "x": "861.88", "y": "3864.16" },
+    "languageSelector": { "x": "931.24", "y": "3849.16" },
+    "divider1": { "x": "970" },
+    "divider2": { "x": "1033" },
+    "divider3": { "x": "1093" },
+    "divider4": { "x": "1155" },
+    "divider5": { "x": "1183" }
+  },
+
+  "chatbot": {
+    "welcome": "GameCompass'a hoş geldiniz! Size nasıl yardımcı olabilirim?",
+    "placeholder": "Bir mesaj yazın...",
+    "send": "Gönder",
+    "title": "GameCompass Asistanı",
+    "error": "Üzgünüm, mesajınızı işleyemedim. Lütfen daha sonra tekrar deneyin.",
+    "history": "Sohbet geçmişi",
+    "newChat": "Yeni sohbet",
+    "noHistory": "Sohbet geçmişi mevcut değil",
+    "deleteChat": "Sohbeti sil"
+  },
+  "audioChat": {
+    "listening": "Dinliyorum...",
+    "processing": "İşleniyor...",
+    "responding": "Yanıtlıyor...",
+    "error": {
+      "microphoneAccess": "Lütfen mikrofon erişimine izin verin",
+      "microphoneError": "Mikrofon hatası",
+      "noSpeech": "Konuşma algılanmadı. Lütfen daha net konuşun.",
+      "audioCapture": "Mikrofon sorunu. Lütfen cihaz ayarlarınızı kontrol edin.",
+      "notAllowed": "Mikrofon erişimi reddedildi. Lütfen erişime izin verin.",
+      "speechRecognition": "Konuşma tanıma hatası",
+      "responseGeneration": "Yanıt oluşturma hatası",
+      "speechGeneration": "Konuşma oluşturma hatası",
+      "speechOutput": "Ses çıkışı hatası"
+    },
+    "voiceToggle": {
+      "female": "Kadın sesi etkinleştirildi",
+      "male": "Erkek sesi etkinleştirildi",
+      "femaleTitle": "Erkek sesine geç",
+      "maleTitle": "Kadın sesine geç"
+    },
+    "startButton": "Sesli asistanı başlat",
+    "stopButton": "Kaydı durdur",
+    "browserNotSupported": "Tarayıcı konuşma tanımayı desteklemiyor"
+  },
+  "errors": {
+    "loadGames": "Oyunlar yüklenirken hata oluştu",
+    "createOffer": "Teklif oluşturulurken hata oluştu"
+  },
+  "success": {
+    "offerCreated": "Teklif başarıyla oluşturuldu!"
+  },
+  "common": {
+    "close": "Kapat"
+  },
+  "condition": {
+    "new": "Yeni",
+    "newDescription": "Orijinal ve kullanılmamış",
+    "used": "Kullanılmış",
+    "usedDescription": "Test edilmiş ve iyi durumda"
+  },
+  "aboutUs": {
+    "title": "GameCompass Hakkında",
+    "description": "Yeni blockbuster'ları, indie özellerini ve zamansız klasikleri keşfedin – hızlı, güvenli ve kolay. Bizimle kesinlikle size uygun oyunu bulacaksınız.",
+    "mission": {
+      "title": "Misyonumuz",
+      "description": "Misyonumuz, oyun ticaretinin basit, şeffaf ve herkes için erişilebilir olduğu canlı bir topluluk oluşturmaktır. Oyunlara erişimin, onları oynamak kadar eğlenceli ve sorunsuz olması gerektiğine inanıyoruz."
+    },
+    "features": {
+      "title": "Bizi özel kılan şey",
+      "marketplace": "Herkes için pazar: Ticari sağlayıcılar",
+      "crossplatform": "Çapraz platform: PC için oyunlar",
+      "security": "Güvenli işlemler: Alıcı ve satıcı koruması dahil",
+      "usability": "Kolay kullanım: Sezgisel kullanıcı arayüzü ve modern mağaza"
+    },
+    "values": {
+      "title": "Değerlerimiz",
+      "fairness": "Adalet: Herkes için şeffaf fiyatlar ve adil koşullar",
+      "reliability": "Güvenilirlik: Teknik destek ve güvenli ödeme",
+      "passion": "Tutku: Oyunları seviyoruz ve oyun kültürünü yaşıyoruz",
+      "innovation": "İnovasyon: En iyi kullanıcı deneyimi için sürekli geliştirme"
+    },
+    "team": {
+      "title": "Takım & Geliştirme",
+      "description": "GameCompass'ın arkasında oyun geçmişi olan genç, dinamik bir takım var. Platformu geliştirmek için sürekli çalışıyoruz – bayiler, alıcılar ve tüm oyun dünyası için."
+    },
+    "vision": {
+      "title": "Gelecek & Vizyon",
+      "description": "Vizyonumuz GameCompass'ı dijital ve fiziksel oyun ticareti için önde gelen platform yapmaktır – küresel, sürdürülebilir ve kullanıcı odaklı."
+    }
+  }
+  ,
+  "sell": {
+    "digitalOffer":   "Dijital teklif",
+    "physicalOffer":  "Fiziksel teklif",
+    "digitalKey":     "Dijital anahtar",  
+    "loginFirst":      "Lütfen önce giriş yapın.",
+    "loginRequired":   "Giriş gerekli",
+    "startStripe":     "Stripe kurulumu başlat",
+    "continueStripe":  "Stripe’a devam et",
+    "redirecting":     "Yönlendiriliyor…",
+    "title": "Oyunlarınızı kolayca ve hızlıca satın!",
+    "description": "Oynamadığınız oyunlar mı var? Burada satın, diğer oyuncuları mutlu edin.",
+    "createOffer": "Yeni ilan oluştur",
+    "selectGame": "Oyun seç",
+    "selectGamePlaceholder": "Bir oyun seçin…",
+    "price": "Fiyat (€)",
+    "condition": "Durum",
+    "used": "Kullanılmış",
+    "new": "Yeni",
+    "yourGames": "Oyunların",
+    "gameName": "Oyun adı",
+    "gameNamePlaceholder": "Oyun adı…",
+    "gameDescription": "Açıklama",
+    "gameDescriptionPlaceholder": "Kısa açıklama…",
+    "gamePrice": "Fiyat",
+    "gamePricePlaceholder": "örn. 19.99",
+    "gameAvailability": "Hemen teslim",
+    "gameImageURL": "Resim yükle",
+    "createGameTitle": "Yeni oyun",
+    "createOfferTitle": "ve ilan",
+    "createGameAndOfferButton": "Oyun + ilan oluştur",
+    "creating": "Oluşturuluyor…",
+    "gameAndOfferCreatedSuccess": "Oyun ve ilan başarıyla oluşturuldu!",
+    "genres": "Türler",
+    "genresPlaceholder": "Tür seç…",
+    "platforms": "Platformlar",
+    "platformsPlaceholder": "Platform seç…",
+    "searchGame": "Oyun ara",
+    "searchGamePlaceholder": "Yazıp ara…",
+    "gameSelected": "\"{{name}}\" seçildi"
+  },
+  "verifyPending": {
+    "title": "Gelen kutunu kontrol et, {{username, string}}!",
+    "subtitle": "E-posta adresini doğrulaman için sana bir bağlantı gönderdik."
+  },  "cart": {
+    "add": "Inci sepete ekle",
+    "goToCart": "Sepete git",
+    "continueShopping": "Alışverişe devam et",
+    "itemAdded": "Ürün sepete eklendi",
+    "notification": "Sepet",
+    "chooseNextStep": "Sonraki adım ne olsun?"
+  }
+}

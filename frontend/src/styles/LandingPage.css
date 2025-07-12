@@ -1,0 +1,160 @@
+.svg-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform-origin: top center;
+  transform: scale(1); /* Originalgröße beibehalten */
+}
+
+.game-card {
+  position: relative;
+  cursor: pointer;
+  border-radius: 25.12px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  z-index: 1;
+  pointer-events: auto;
+}
+
+.game-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.game-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  pointer-events: none; /* Verhindern dass das Bild Klicks blockiert */
+}
+
+.game-card:hover img {
+  transform: scale(1.1);
+}
+
+.game-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+  color: white;
+  opacity: 0;
+  transform: translateY(25px);
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  backdrop-filter: blur(5px);
+  pointer-events: none; /* Verhindern dass der Text Klicks blockiert */
+}
+
+.game-card:hover .game-info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-game-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+  color: white;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border-radius: 0 0 50px 50px;
+  backdrop-filter: blur(8px);
+  pointer-events: none; /* Verhindern dass der Text Klicks blockiert */
+}
+
+.hero-carousel:hover .hero-game-info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-game-info div:first-child {
+  font-weight: 700;
+  font-size: 2.2em;
+  margin-bottom: 12px;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.7);
+  line-height: 1.2;
+}
+
+.hero-game-info div:last-child {
+  font-size: 1.6em;
+  color: #4ade80;
+  font-weight: 700;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.7);
+}
+
+.cheap-games-container {
+  position: relative;
+}
+
+.game-card.fade-out {
+  opacity: 0;
+}
+
+.game-card.fade-in {
+  opacity: 1;
+}
+
+.arrow-transitioning {
+  opacity: 0.5;
+  transition: opacity 0.5s ease;
+}
+
+#meistgekauft_links_swipe,
+#meistgekauft_rechts_swipe {
+  transition: transform 0.5s ease;
+}
+
+#meistgekauft_links_swipe:hover,
+#meistgekauft_rechts_swipe:hover {
+  transform: scale(1.1);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50px;
+}
+
+/* Verhindere dass Child-Elemente Klicks blockieren */
+.game-card * {
+  pointer-events: none;
+}
+
+/* Erlaube wieder Klicks auf dem Card selbst */
+.game-card {
+  pointer-events: auto;
+}
