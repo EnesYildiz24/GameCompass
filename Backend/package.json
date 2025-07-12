@@ -8,7 +8,8 @@
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "start": "npm run build && ts-node src/server.ts",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,css,md,json}\"",
-    "init-db": "node src/scripts/initDb.js"
+    "init-db": "node src/scripts/initDb.js",
+    "start:prod": "node dist/index.js"   
   },
   "keywords": [],
   "author": "enes",
