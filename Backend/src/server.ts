@@ -15,7 +15,7 @@ const key = fs.readFileSync(path.resolve(process.cwd(), process.env.SSL_KEY_FILE
 const cert = fs.readFileSync(path.resolve(process.cwd(), process.env.SSL_CRT_FILE!));
 
 const PORT = process.env.PORT || 3000;
-const URI = process.env.MONGO_URI || 'mongodb://localhost:27017/GameCompass';
+const URI = process.env.MONGO_URI!
 
 async function start() {
   try {
