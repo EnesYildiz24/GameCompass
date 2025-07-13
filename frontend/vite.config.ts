@@ -13,13 +13,13 @@ export default defineConfig({
     proxy: {
 
       '/user': {
-        target: 'https://localhost:3000',
+        target: 'https://gamecompass-8eh4o.ondigitalocean.app/gamecompass-backend',
         changeOrigin: true,
         secure: false,
       },
       // dasselbe für deine Auth-Routes
       '/auth': {
-        target: 'https://localhost:3000',
+        target: 'https://gamecompass-8eh4o.ondigitalocean.app/gamecompass-backend',
         changeOrigin: true,
         secure: false,
       },
