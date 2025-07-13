@@ -15,7 +15,7 @@ async function start() {
   try {
     await mongoose.connect(URI, {
       ...(URI.startsWith('mongodb://') ? { directConnection: true } : {}),
-      serverSelectionTimeoutMS: 30000,
+      serverSelectionTimeoutMS: 60000,
     });
     console.log(`✅ MongoDB connected (${mongoose.connection.name})`);
     initGridFS();
