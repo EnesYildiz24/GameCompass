@@ -8,15 +8,13 @@ import mongoose from 'mongoose';
 import app from './app';
 import { initGridFS } from './gridFs';
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT;
 const URI = process.env.MONGO_URI!;
 
 async function start() {
   try {
-    await mongoose.connect(URI, {
-      ...(URI.startsWith('mongodb://') ? { directConnection: true } : {}),
-      serverSelectionTimeoutMS: 60000,
-    });
+    await mongoose.connect(URI, { serverSelectionTimeoutMS: 60000 });
+
     console.log(`✅ MongoDB connected (${mongoose.connection.name})`);
     initGridFS();
 
