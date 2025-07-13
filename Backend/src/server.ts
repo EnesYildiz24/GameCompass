@@ -8,7 +8,7 @@ import mongoose from 'mongoose';
 import app from './app';
 import { initGridFS } from './gridFs';
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 const URI = process.env.DATABASE_URL || process.env.MONGODB_URI!;
 
 async function start() {
