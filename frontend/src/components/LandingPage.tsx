@@ -169,7 +169,7 @@ export function LandingPage() {
 
       if (gameOffer) {
         // Öffne SpielDetail in neuem Tab
-        window.open(`/offer/${gameOffer._id}`, '_blank');
+        window.open(`/#/offer/${gameOffer._id}`, '_blank');
       } else {
         console.log('Kein Offer für dieses Spiel gefunden');
         // Falls kein Offer gefunden wird, navigiere zur Spiele-Liste mit Suche
