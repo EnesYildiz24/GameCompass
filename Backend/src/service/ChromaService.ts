@@ -2,21 +2,26 @@ import { ChromaClient } from 'chromadb';
 import { ISpiel } from '../model/SpielModel';
 
 class ChromaService {
-  private client: ChromaClient;
-  private collectionPromise: ReturnType<ChromaClient['getOrCreateCollection']>;
+  private client?: ChromaClient;
+  private collectionPromise?: ReturnType<ChromaClient['getOrCreateCollection']>;
 
   constructor() {
-    // Standard HTTP Client - erwartet Server auf localhost:8000
-    this.client = new ChromaClient();
-    
-    this.collectionPromise = this.client.getOrCreateCollection({
-      name: 'spiele',
-    });
-  }
+    /*  ⬇️ Nur wenn CHROMA_URL definiert ist  */
+    const chromaUrl = process.env.CHROMA_URL;
+    if (!chromaUrl) {
+      console.log('ℹ️  CHROMA_URL not set – skipping ChromaDB init');
+      return;                                // alles überspringen
+    }
 
+    this.client = new ChromaClient({ path: chromaUrl });
+    this.collectionPromise = this.client.getOrCreateCollection({ name: 'spiele' });
+  }
   /** Games in den Vektor-Store upserten */
   async upsertGames(games: ISpiel[]): Promise<void> {
     const collection = await this.collectionPromise;
+    if (!collection) {
+      throw new Error('Collection is not initialized. Ensure CHROMA_URL is set.');
+    }
     await collection.upsert({
       ids: games.map(g => g._id!.toString()),
       documents: games.map(g => `
@@ -92,6 +97,9 @@ class ChromaService {
       };
     }
     
+    if (!collection) {
+      throw new Error('Collection is not initialized. Ensure CHROMA_URL is set.');
+    }
     const res = await collection.query(queryParams);
     
     // Erweitertes Logging
