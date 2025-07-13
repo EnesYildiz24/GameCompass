@@ -9,7 +9,7 @@ import app from './app';
 import { initGridFS } from './gridFs';
 
 const PORT = process.env.PORT || 8080;
-const URI = process.env.DATABASE_URL || process.env.MONGO_URI!;
+const URI = process.env.MONGO_URI!;
 
 async function start() {
   try {
