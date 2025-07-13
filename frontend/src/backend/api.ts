@@ -438,7 +438,7 @@ export async function apiLoginFacebook(accessToken: string) {
 }
 
 export async function apiLoginGoogle(credential: string): Promise<UserResource> {
-  const response = await fetch('https://localhost:3000/auth/google', {
+  const response = await fetch('https://gamecompass-8eh4o.ondigitalocean.app/gamecompass-backend/auth/google', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     credentials: 'include',
