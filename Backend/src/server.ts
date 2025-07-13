@@ -9,13 +9,12 @@ import app from './app';
 import { initGridFS } from './gridFs';
 
 const PORT = process.env.PORT || 3000;
-const URI  = process.env.MONGO_URI!;
+const URI = process.env.DATABASE_URL || process.env.MONGODB_URI!;
 
 async function start() {
   try {
     await mongoose.connect(URI, {
-      authSource: 'admin',
-      directConnection: true,
+      ...(URI.startsWith('mongodb://') ? { directConnection: true } : {}),
       serverSelectionTimeoutMS: 30000,
     });
     console.log(`✅ MongoDB connected (${mongoose.connection.name})`);
