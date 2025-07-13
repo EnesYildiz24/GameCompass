@@ -20,11 +20,11 @@ root.render(
       <I18nextProvider i18n={i18n}>
         <AuthProvider>
           <ThemeProvider>
-            <BrowserRouter>
+            <HashRouter>
               <ErrorBoundary FallbackComponent={ErrorFallback}>
                 <App />
               </ErrorBoundary>
-            </BrowserRouter>
+            </HashRouter>
           </ThemeProvider>
         </AuthProvider>
       </I18nextProvider>
