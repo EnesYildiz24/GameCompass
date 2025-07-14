@@ -41,6 +41,7 @@ function App() {
         <Route path="/cart" element={<Warenkorb />} />
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/order/success" element={<OrderSuccess />} />
+        
         <Route path="/verify-failed" element={<VerifyFailed />} />
 
         {/* Sell routen */}
