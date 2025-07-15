@@ -10,6 +10,7 @@ const router = express.Router();
 /* ---------- 1) Standard-Checkout-Webhook --------------------------- */
 router.post(
   '/', // →  /api/stripe/webhook
+  express.raw({ type: 'application/json' }),
   async (req, res) => {
     let event: Stripe.Event;
 
