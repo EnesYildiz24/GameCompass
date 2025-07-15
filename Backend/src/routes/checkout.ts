@@ -66,8 +66,8 @@ router.post(
       const session = await stripe.checkout.sessions.create({
         mode:        'payment',
         line_items,
-        success_url: `${process.env.CORS_ORIGIN}/order/success?session_id={CHECKOUT_SESSION_ID}`,
-        cancel_url:  `${process.env.CORS_ORIGIN}/cart`,
+        success_url: `${process.env.CORS_ORIGIN}/#/order/success?session_id={CHECKOUT_SESSION_ID}`,
+        cancel_url:  `${process.env.CORS_ORIGIN}/#/cart`,
         metadata:    { orderId, userId: req.user!.id.toString() },
         payment_intent_data: {
           application_fee_amount: Math.round(order.price * 0.05 * 100),
